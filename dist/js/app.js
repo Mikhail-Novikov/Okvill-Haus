@@ -1,2 +1,156 @@
-!function(t){var e={};function n(o){if(e[o])return e[o].exports;var c=e[o]={i:o,l:!1,exports:{}};return t[o].call(c.exports,c,c.exports,n),c.l=!0,c.exports}n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{configurable:!1,enumerable:!0,get:o})},n.r=function(t){Object.defineProperty(t,"__esModule",{value:!0})},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=333)}({331:function(t,e,n){"use strict";function o(){o.bindUIActions()}function c(t){var e=t.target;e.closest(".btn-center-label")?(e.closest(".section").classList.toggle("label-center"),"хочу по центру чек-поинта"==e.textContent?e.textContent="хочу по центру прогресс-линии":e.textContent="хочу по центру чек-поинта"):document.querySelectorAll(".section").forEach(function(t){e.closest(".btn-center-label")&&t.classList.remove("label-center")})}function r(t){var e=t.target;e.closest(".btn-down-label")?(e.closest(".section").classList.toggle("label-down"),"хочу над таймлайном"==e.textContent?e.textContent="хочу под таймлайном":e.textContent="хочу над таймлайном"):document.querySelectorAll(".section").forEach(function(t){e.closest(".btn-down-label")&&t.classList.remove("label-down")})}Object.defineProperty(e,"__esModule",{value:!0}),e.default=o,o.bindUIActions=function(){document.addEventListener("click",c),document.addEventListener("click",r)}},332:function(t,e,n){"use strict";(0,function(t){return t&&t.__esModule?t:{default:t}}(n(331)).default)()},333:function(t,e,n){t.exports=n(332)}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _checkTimeline = __webpack_require__(2);
+
+var _checkTimeline2 = _interopRequireDefault(_checkTimeline);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _checkTimeline2.default)();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = checkTimeLine;
+
+
+function checkTimeLine() {
+  checkTimeLine.bindUIActions();
+}
+
+checkTimeLine.bindUIActions = function () {
+  document.addEventListener('click', checkCenterLabel);
+  document.addEventListener('click', checkDownLabel);
+};
+
+function checkCenterLabel(event) {
+  var target = event.target;
+  if (target.closest('.btn-center-label')) {
+    target.closest('.section').classList.toggle('label-center');
+
+    if (target.textContent == "хочу по центру чек-поинта") {
+      target.textContent = "хочу по центру прогресс-линии";
+    } else {
+      target.textContent = "хочу по центру чек-поинта";
+    }
+  } else {
+    document.querySelectorAll('.section').forEach(function (item) {
+      if (target.closest('.btn-center-label')) {
+        item.classList.remove('label-center');
+      }
+    });
+  }
+}
+
+function checkDownLabel(event) {
+  var target = event.target;
+  if (target.closest('.btn-down-label')) {
+    target.closest('.section').classList.toggle('label-down');
+
+    if (target.textContent == "хочу над таймлайном") {
+      target.textContent = "хочу под таймлайном";
+    } else {
+      target.textContent = "хочу над таймлайном";
+    }
+  } else {
+    document.querySelectorAll('.section').forEach(function (item) {
+      if (target.closest('.btn-down-label')) {
+        item.classList.remove('label-down');
+      }
+    });
+  }
+}
+
+/***/ })
+/******/ ]);
 //# sourceMappingURL=app.js.map

@@ -13,19 +13,8 @@
 
 ::selection {
   color: white;
-  background-color: $color-link;
 }
 
 p {
   margin: 0;
-}
-
-.js-focus-visible {
-  :focus:not(.focus-visible) {
-    outline: none;
-  }
-
-  .focus-visible {
-
-  }
 }
