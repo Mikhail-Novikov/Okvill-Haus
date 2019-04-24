@@ -1,0 +1,6 @@
+<svg class="svg-symbols" style="position: absolute; clip: rect(0, 0, 0, 0);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path id="more.svg-b" d="M703 3845a6 6 0 0 1 8.8-5.3l1.46-1.46A8 8 0 0 0 701 3845h-3l4 4 4-4h-3zm13-4l-4 4h3a6 6 0 0 1-8.8 5.3l-1.46 1.46A8 8 0 0 0 717 3845h3l-4-4z"/><linearGradient id="more.svg-a" x1="702.06" x2="713.42" y1="3838.72" y2="3848.32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fa6e71"/><stop offset="1" stop-color="#c84080"/></linearGradient>
+</defs>
+<symbol id="icon-svg-more" viewBox="0 0 22 16"><use fill="url(#more.svg-a)" xlink:href="#more.svg-b" transform="translate(-698 -3837)"/></symbol>
+</svg>

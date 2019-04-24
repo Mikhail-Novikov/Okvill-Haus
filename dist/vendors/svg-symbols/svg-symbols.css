@@ -1,0 +1,17 @@
+[class*='icon-svg-'] {
+  fill: currentColor;
+}
+
+[class*='icon-svg-'] use {
+  pointer-events: none;
+}
+
+.icon-svg-more {
+  width: 1.375em;
+  height: 1em;
+}
+
+#icon-svg-more {
+  
+}
+
