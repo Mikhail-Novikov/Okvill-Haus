@@ -1,0 +1,30 @@
+.header {
+  .nav {
+    ul {
+      margin: 0;
+    }
+    li {
+      transition: background-color .3s;
+      float: left;
+      padding: 0;
+    }
+    a {
+      transition: background-color .3s;
+      font-size: 1rem;
+      color: #fff;
+      display: block;
+      padding: 0 0.9375rem;
+      cursor: pointer;
+    }
+    &__d-menu{
+      height: 4rem;
+      line-height: 4rem;
+      color: #fff;
+      //background-color: #fdeaeb;
+      width: 100%;
+    }
+
+  }
+
+
+}
