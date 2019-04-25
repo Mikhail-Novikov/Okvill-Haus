@@ -9,6 +9,21 @@
   margin: 0.9375rem;
 }
 
+.header {
+  padding: 0.9375rem 0;
+}
+
+.header__logo-container {
+  padding-top: 1.25rem;
+}
+
+.header .title {
+  font-size: 1.125rem;
+  padding: 0 1.875rem 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .header .nav ul {
   margin: 0;
 }
@@ -19,19 +34,33 @@
   padding: 0;
 }
 
+.header .nav li:first-child a {
+  padding-left: 0;
+}
+
+.header .nav li:last-child a {
+  padding-right: 0;
+}
+
 .header .nav a {
   transition: background-color .3s;
+  text-transform: uppercase;
   font-size: 1rem;
-  color: #fff;
+  color: #616161;
   display: block;
   padding: 0 0.9375rem;
   cursor: pointer;
 }
 
+.header .nav a:hover {
+  color: #D32F2F;
+}
+
 .header .nav__d-menu {
-  height: 4rem;
-  line-height: 4rem;
+  overflow: hidden;
+  padding: 0.625rem 1.875rem;
   color: #fff;
+  background-color: #f5f3f7;
   width: 100%;
 }
 
