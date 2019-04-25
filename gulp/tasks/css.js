@@ -2,6 +2,7 @@
 
 import paths from "../paths";
 import gulp from 'gulp';
+import gulpWait from 'gulp-wait';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import combiner from 'stream-combiner2';
 import * as emitty from 'emitty';
@@ -17,7 +18,7 @@ export default function css() {
     gulp.src(paths.css.src),
     gp.if(global.watch && global.scssChangedFile !== undefined, emittySCSS.stream(global.scssChangedFile)),
     gp.sourcemaps.init(),
-    gp.cssimport({matchPattern: "*.{css,scss}"}),
+    gp.cssimport({matchPattern: "*.{css,scss}"}).pipe(gulpWait(200)),
     gp.sass({
       includePaths: [],
       outputStyle: 'expanded',
