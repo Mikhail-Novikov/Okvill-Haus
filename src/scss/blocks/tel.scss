@@ -1,0 +1,21 @@
+.fhone {
+  transition: 0.1s;
+  &__tel{
+    span {
+      color: #000;
+      letter-spacing: 0.35px;
+      padding: 0 4px;
+      transition: 0.1s;
+    }
+    span:first-child {
+      font-size: 11px;
+    }
+    span:last-child {
+      font-family: "HelveticaNeueCyr-Bold";
+      font-size: 26px;
+    }    
+  }
+  &:hover a span, &:hover{
+    color: $link-menu-hover !important;
+  }
+}

@@ -83,73 +83,77 @@ module.exports = __webpack_require__(1);
 "use strict";
 
 
-var _checkTimeline = __webpack_require__(2);
+var _menu = __webpack_require__(2);
 
-var _checkTimeline2 = _interopRequireDefault(_checkTimeline);
+var _menu2 = _interopRequireDefault(_menu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _checkTimeline2.default)();
+(0, _menu2.default)();
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
-exports.default = checkTimeLine;
+exports.default = intializeMenu;
 
 
-function checkTimeLine() {
-  checkTimeLine.bindUIActions();
-}
-
-checkTimeLine.bindUIActions = function () {
-  document.addEventListener('click', checkCenterLabel);
-  document.addEventListener('click', checkDownLabel);
+var settings = {
+	shrinktogglerAfter: 'firstpage', // shrink hamburgerui UL to just show last LI with hamburger icon when user scrolls the page down? 'firstpage' or px number (ie: 200)
+	dismissmenuDelay: 200 // delay in miliseconds after user clicks on full screen menu before hiding it
 };
 
-function checkCenterLabel(event) {
-  var target = event.target;
-  if (target.closest('.btn-center-label')) {
-    target.closest('.section').classList.toggle('label-center');
+function intializeMenu() {
+	var $menuwrapper = $('#hamburgericonmenuwrapper');
+	var $fullscreenmenu = $menuwrapper.find('#fullscreenmenu');
+	var $hamburgerui = $('#hamburgerui');
+	var $toggler = $('#navtoggler').parent();
+	var scrolltop;
+	var strinkafter;
+	var shrinktimer;
+	var dismisstimer;
 
-    if (target.textContent == "хочу по центру чек-поинта") {
-      target.textContent = "хочу по центру прогресс-линии";
-    } else {
-      target.textContent = "хочу по центру чек-поинта";
-    }
-  } else {
-    document.querySelectorAll('.section').forEach(function (item) {
-      if (target.closest('.btn-center-label')) {
-        item.classList.remove('label-center');
-      }
-    });
-  }
+	$toggler.on('click', function (e) {
+		$menuwrapper.toggleClass('open');
+		e.preventDefault();
+	});
+
+	$fullscreenmenu.on('click', function (e) {
+		clearTimeout(dismisstimer);
+		dismisstimer = setTimeout(function () {
+			$menuwrapper.removeClass('open');
+		}, settings.dismissmenuDelay);
+	});
+
+	if ($menuwrapper.length == 1 && settings.shrinktogglerAfter != 0) {
+		var shrinktogglerAfter = settings.shrinktogglerAfter;
+		$(window).on('scroll resize', function (e) {
+			clearTimeout(shrinktimer);
+			shrinktimer = setTimeout(function () {
+				scrolltop = $(window).scrollTop();
+				strinkafter = shrinktogglerAfter == 'firstpage' ? $(window).height() : parseInt(shrinktogglerAfter);
+				if (scrolltop > strinkafter && !$hamburgerui.hasClass('shrink')) {
+					$hamburgerui.addClass('shrink');
+				} else if (scrolltop < strinkafter && $hamburgerui.hasClass('shrink')) {
+					$hamburgerui.removeClass('shrink');
+				}
+			}, 50);
+		});
+	}
 }
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(3)))
 
-function checkDownLabel(event) {
-  var target = event.target;
-  if (target.closest('.btn-down-label')) {
-    target.closest('.section').classList.toggle('label-down');
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
 
-    if (target.textContent == "хочу над таймлайном") {
-      target.textContent = "хочу под таймлайном";
-    } else {
-      target.textContent = "хочу над таймлайном";
-    }
-  } else {
-    document.querySelectorAll('.section').forEach(function (item) {
-      if (target.closest('.btn-down-label')) {
-        item.classList.remove('label-down');
-      }
-    });
-  }
-}
+module.exports = jQuery;
 
 /***/ })
 /******/ ]);

@@ -1,5 +1,13 @@
-@import "lib/_color-variables.scss";
+@import "lib/functions";
 @import "lib/variables";
+@import "lib/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
 
 @import "blocks/section";
 @import "blocks/header";
+@import "blocks/societ";
+@import "blocks/tel";
+@import "blocks/buttons";
+@import "blocks/m-menu";

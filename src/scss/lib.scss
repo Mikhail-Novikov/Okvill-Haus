@@ -1,13 +1,31 @@
 @import "lib/reset";
 
 @import "lib/functions";
-
-@import "lib/_color-variables.scss";
 @import "lib/variables";
-
 @import "lib/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+//@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+//@import "../fonts/Smarty Cond/stylesheet.css";
+
+
+@import "../../node_modules/normalize.css/normalize.css";
+
+@import "../vendors/svg-symbols/svg-symbols.css";
+
+@import "../../node_modules/bootstrap/scss/grid";
+
+@import "../../node_modules/bootstrap/scss/transitions";
+
+@import "../../node_modules/bootstrap/scss/utilities";
+
 @import "lib/utilities";
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+@import "../../node_modules/slick-carousel/slick/slick.css";
 
-@import "lib/materialize.scss";
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";
+
+@import "lib/fonts";
+

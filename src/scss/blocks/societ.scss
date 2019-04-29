@@ -1,0 +1,16 @@
+.nav .societ {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  a {
+    padding: 8px;
+    border-left: 1px solid $collection-border-color;
+    &:first-child {
+      border: 0;
+    }
+    svg {
+      height: 13px;
+      width: 20px;
+    }
+  }
+}

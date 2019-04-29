@@ -1,5 +1,5 @@
 'use strict';
 
-import checkTimeLine from './blocks/check-timeline';
+import intializeMenu from './blocks/menu';
 
-checkTimeLine();
+intializeMenu();
