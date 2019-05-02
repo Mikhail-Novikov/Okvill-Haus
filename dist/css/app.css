@@ -9,6 +9,35 @@
   margin: 0.9375rem;
 }
 
+.content p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #7a8c96;
+  text-align: justify;
+  padding-bottom: 1.5625rem;
+}
+
+.content ul {
+  padding-bottom: 1.5625rem;
+}
+
+.content ul li {
+  color: #7a8c96;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.content ul li:before {
+  content: "";
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 100%;
+  background-color: #f5003b;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
 .header {
   padding: 0.9375rem 0;
 }
@@ -623,37 +652,37 @@ button.btn-floating {
   z-index: -1;
 }
 
-#hamburgericonmenuwrapper {
+.hamburger-icon-menu-wrapper {
   z-index: 10000;
   position: absolute;
   font-size: 1rem;
   /* base font size for em values below */
 }
 
-/* ###### CSS for Hamburger UI DIV and links ###### */
-#hamburgerui {
+/* ...... CSS for Hamburger UI DIV and links ...... */
+.hamburger-ui {
   overflow: hidden;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 2;
-  /* make #hamburgerui higher in z-index than #fullscreenmenu */
+  /* make .hamburgerui higher in z-index than .fullscreenmenu */
 }
 
-#hamburgerui ul {
+.hamburger-ui ul {
   margin: 0;
   padding: 0;
   font: bold 1rem 'Bitter', sans-serif;
-  /* #hamburgerui font size (Bitter is Google font) */
+  /* .hamburgerui font size (Bitter is Google font) */
   list-style-type: none;
 }
 
-#hamburgerui li {
+.hamburger-ui li {
   display: inline;
   margin: 0;
 }
 
-#hamburgerui li a {
+.hamburger-ui li a {
   float: left;
   display: block;
   position: relative;
@@ -668,26 +697,26 @@ button.btn-floating {
   transition: all 0.5s;
 }
 
-#hamburgerui li:last-of-type a {
+.hamburger-ui li:last-of-type a {
   width: 2.1875rem;
   /* width of last LI A containing hamburger style icon */
 }
 
-#hamburgerui li:last-of-type a:after {
+.hamburger-ui li:last-of-type a:after {
   content: 'Menu';
   visibility: hidden;
 }
 
-#hamburgerui li a:visited {
+.hamburger-ui li a:visited {
   color: white;
 }
 
-#hamburgerui li a:hover {
+.hamburger-ui li a:hover {
   background: red;
   /*background of UI links for hover state  */
 }
 
-#navtoggler {
+.nav-toggler {
   /* Main hamburger icon to toggle menu state */
   display: block;
   position: absolute;
@@ -709,7 +738,7 @@ button.btn-floating {
   transition: all 0.3s ease-in;
 }
 
-#navtoggler::before, #navtoggler::after {
+.nav-toggler::before, .nav-toggler::after {
   /* inner strip inside hamburger icon */
   content: "";
   display: block;
@@ -724,8 +753,8 @@ button.btn-floating {
   transition: all 0.3s ease-in;
 }
 
-/* ###### CSS for Full Screen Menu NAV ###### */
-#fullscreenmenu {
+/* ...... CSS for Full Screen Menu NAV ...... */
+.full-screen-menu {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -748,7 +777,7 @@ button.btn-floating {
   transition: transform 0.5s, visibility 0s 0.5s, -webkit-transform 0.5s;
 }
 
-#fullscreenmenu ul {
+.full-screen-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -756,7 +785,6 @@ button.btn-floating {
   position: relative;
   font-weight: bold;
   font-size: 2.5em;
-  /* font size of UL menu */
   text-transform: uppercase;
   -webkit-transform: translate3D(0, -2.5rem, 0);
   transform: translate3D(0, -2.5rem, 0);
@@ -764,18 +792,14 @@ button.btn-floating {
   transition: all 0.5s 0.4s;
 }
 
-#fullscreenmenu ul li {
-  width: 50%;
-  /* by default, show 2 columns of links */
-  float: left;
+.full-screen-menu ul li {
   display: inline;
   text-align: center;
   box-sizing: border-box;
   margin-bottom: 0.5rem;
-  /* bottom spacing between LI */
 }
 
-#fullscreenmenu ul li a {
+.full-screen-menu ul li a {
   text-decoration: none;
   position: relative;
   color: white;
@@ -786,22 +810,22 @@ button.btn-floating {
   transition: background 0.3s;
 }
 
-#fullscreenmenu ul li a:hover {
+.full-screen-menu ul li a:hover {
   background: darkred;
 }
 
-#fullscreenmenu ul li a:hover:after {
+.fullscreenmenu ul li a:hover:after {
   width: 100%;
 }
 
-/* #### Menu Hamburger Icon UI when shrinked CSS ######## */
-#hamburgerui.shrink li:nth-last-of-type(n+2) a {
+/* .... Menu Hamburger Icon UI when shrinked CSS ........ */
+.hamburger-ui.shrink li:nth-last-of-type(n+2) a {
   opacity: 0;
   pointer-events: none;
 }
 
-/* #### Menu Opened State CSS ######## */
-#hamburgericonmenuwrapper.open #fullscreenmenu {
+/* .... Menu Opened State CSS ........ */
+.hamburger-icon-menu-wrapper.open .full-screen-menu {
   visibility: visible;
   -webkit-transform: translate3D(0, 0, 0);
   /* show menu by shifting it vertically to visible position within container */
@@ -811,62 +835,349 @@ button.btn-floating {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-#hamburgericonmenuwrapper.open #navtoggler {
+.hamburger-icon-menu-wrapper.open .nav-toggler {
   border-width: 0;
 }
 
-#hamburgericonmenuwrapper.open #navtoggler::before {
+.hamburger-icon-menu-wrapper.open .nav-toggler::before {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   /* rotate line to create "x" */
 }
 
-#hamburgericonmenuwrapper.open #navtoggler::after {
+.hamburger-icon-menu-wrapper.open .nav-toggler::after {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   /* rotate line to create "x" */
 }
 
-#hamburgericonmenuwrapper.open #hamburgerui li:nth-last-of-type(n+2) a {
+.hamburger-icon-menu-wrapper.open .hamburger-ui li:nth-last-of-type(n+2) a {
   opacity: 0;
   pointer-events: none;
 }
 
-#hamburgericonmenuwrapper.open #fullscreenmenu ul {
+.hamburger-icon-menu-wrapper.open .full-screen-menu ul {
   opacity: 1;
   -webkit-transform: translate3D(0, 0, 0);
   transform: translate3D(0, 0, 0);
   /* restore UL to original positon */
 }
 
-/* ####### responsive layout CSS ####### */
+/* ....... responsive layout CSS ....... */
 @media (max-width: 50rem) {
   /* 1st breaking point */
-  #hamburgerui li a {
+  .hamburger-ui li a {
     padding: 1.5625rem;
     /*padding inside each link */
   }
-  #fullscreenmenu ul {
+  .full-screen-menu ul {
     font-size: 2em;
   }
 }
 
 @media (max-width: 37.5rem) {
   /* 2nd breaking point */
-  #hamburgerui li a {
+  .hamburger-ui li a {
     padding: 1.25rem;
     /*padding inside each link */
   }
-  #fullscreenmenu ul {
+  .full-screen-menu ul {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 30rem) {
   /* 3rd breaking point */
-  #fullscreenmenu ul {
+  .full-screen-menu ul {
     font-size: 1em;
   }
+}
+
+@media (min-width: 50rem) {
+  /* 3rd breaking point */
+  .hamburger-icon-menu-wrapper {
+    display: none;
+  }
+}
+
+.promo {
+  border: 0.0625rem solid #e2e1dd;
+}
+
+.promo__container {
+  background-color: #e2e1dd;
+  background: url("../img/bg-promo.png");
+  background-size: cover;
+  margin-top: 0.0625rem;
+}
+
+.promo__container img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.works-home__item {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 100%;
+  max-width: 15.625rem;
+  margin-right: 1.875rem;
+  margin-bottom: 1.875rem;
+  height: 8.125rem;
+  box-shadow: 0.125rem 0.1875rem 2rem rgba(89, 86, 84, 0.15);
+  background-color: #fefefe;
+  transition: box-shadow 0.3s;
+}
+
+.works-home__item:last-child {
+  margin-right: 0;
+}
+
+.works-home__item-wrap {
+  padding: 1.375rem 1.5625rem;
+}
+
+.works-home__item-wrap img {
+  display: inline-block;
+  text-align: center;
+  min-height: 3.125rem;
+}
+
+.works-home__item-wrap p {
+  color: #607079;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.works-home__item:hover {
+  box-shadow: 0.25rem 0.3125rem 2.125rem rgba(89, 86, 84, 0.25);
+}
+
+@media (min-width: 30.125rem) {
+  .works-home__item {
+    /* 3rd breaking point */
+    max-width: 11.25rem;
+  }
+}
+
+.banner-home img {
+  display: block;
+  width: 100%;
+}
+
+.banner-home__item-big {
+  margin-bottom: 1.875rem;
+}
+
+.banner-home__item-small {
+  margin-bottom: 1.875rem;
+}
+
+.banner-home .slide li {
+  text-align: center;
+}
+
+.banner-home .slide__caption {
+  display: inline-block;
+  position: absolute;
+  bottom: 3.125rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: rgba(251, 255, 255, 0.69);
+  padding: 0.9375rem;
+}
+
+.slide {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 22.25rem;
+  background: #ccc;
+}
+
+.slide.slide-small {
+  height: 10.125rem;
+}
+
+.slide ul li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.slide .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.25rem;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+}
+
+.slide .dots li {
+  display: inline-block;
+  margin: 0 0.625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 0.125rem solid #fff;
+  border-radius: 50%;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: background .5s, opacity .5s;
+  list-style: none;
+}
+
+.slide .dots li.active, .slide .dots li.active-big {
+  background: #fff;
+  opacity: 1;
+}
+
+.slide .arrow {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background .5s, opacity .5s;
+}
+
+.slide .arrow .arrow-left, .slide .arrow .arrow-right {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5625rem;
+  display: block;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  opacity: 1;
+  transition: background .5s, opacity .5s;
+}
+
+.slide .arrow .arrow-left:hover, .slide .arrow .arrow-right:hover {
+  opacity: 1;
+}
+
+.slide .arrow .arrow-left {
+  left: 0;
+  background: url("../img/arrow-left.png") no-repeat center #fff;
+  width: 3.125rem;
+  height: 3.125rem;
+  box-shadow: 0 0 2rem rgba(20, 26, 45, 0.09);
+}
+
+.slide .arrow .arrow-left.arrow--small {
+  background: url("../img/arrow-left-small.png") no-repeat center #fff;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-top: -0.9375rem;
+}
+
+.slide .arrow .arrow-right {
+  right: 0;
+  background: url("../img/arrow-right.png") no-repeat center #fff;
+  width: 3.125rem;
+  height: 3.125rem;
+  box-shadow: 0 0 2rem rgba(20, 26, 45, 0.09);
+}
+
+.slide .arrow .arrow-right.arrow--small {
+  background: url("../img/arrow-right-small.png") no-repeat center #fff;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-top: -0.9375rem;
+}
+
+.adventures {
+  background-color: #f5f3f7;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.adventures__item {
+  padding: 0.9375rem;
+}
+
+@media (max-width: 50rem) {
+  .adventures__item {
+    /* 3rd breaking point */
+    max-width: 20rem;
+    box-shadow: 0.125rem 0.1875rem 2rem rgba(89, 86, 84, 0.15);
+    background-color: #fefefe;
+    transition: box-shadow 0.3s;
+    margin: 0 auto 1.875rem;
+  }
+}
+
+.adventures img {
+  margin-bottom: 0.9375rem;
+}
+
+.adventures h3 {
+  font-size: 1.25rem;
+  color: #5d7784;
+  padding: 0.5rem 1.5625rem;
+  max-width: 11.25rem;
+  margin: 0 auto;
+}
+
+.about-home {
+  background-color: #eeeeee;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.about-home__wrap {
+  box-shadow: 0.6875rem 1.1875rem 3.875rem rgba(245, 0, 59, 0.56);
+  margin-bottom: 1.5625rem;
+}
+
+.page-footer {
+  height: 17.875rem;
+  background-color: #283335;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+
+.page-footer__wrap {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 100%;
+  padding: 1.25rem 0;
+}
+
+.page-footer__wrap-left {
+  padding: 0 3.125rem;
+  color: #9ca8ab;
+  font-size: 0.8125rem;
+}
+
+.page-footer__wrap-left img {
+  margin-bottom: 1.25rem;
+}
+
+.page-footer__wrap-left .nav {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.page-footer__wrap-left .nav a {
+  border-left-color: #9ca8ab;
+}
+
+.page-footer__wrap-left .nav a svg {
+  color: #9ca8ab;
+}
+
+.page-footer .container {
+  height: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */

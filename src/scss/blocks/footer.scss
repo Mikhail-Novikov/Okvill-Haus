@@ -1,0 +1,33 @@
+.page-footer  {
+  height: 286px;
+  background-color: #283335;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  &__wrap {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    padding: 20px 0;
+  }
+  &__wrap-left {
+    padding: 0 50px;
+    color: #9ca8ab;
+    font-size: 13px;
+    img {
+      margin-bottom: 20px;
+    }
+    .nav {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      a {
+        border-left-color: #9ca8ab;
+        svg {
+          color: #9ca8ab;
+        }
+      }      
+    }
+
+  }
+  .container {
+    height: 100%;  
+  }
+}

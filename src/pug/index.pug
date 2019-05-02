@@ -3,12 +3,44 @@ include lib/mixins
 include blocks/page
 
 include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
 include blocks/footer
-
+include blocks/h2
+include blocks/about
 
 +page(pagesList.index.title)
   +header
-  +b.main.__main
+  +promo
+  +b.main.__main  
+    +worksHome 
+    +bannerHome
+
+    +b.adventures
+      .container
+        +h2('Почему с нами удобно и выгодно?')
+
+        .d-md-flex.flex-md-row.justify-content-between.text-center.flex-sm-column.justify-content-center
+          +e.item
+            img(src="img/adventures/adv1.png", alt="")
+            h3 Партнёрские  цены
+            p от ведущих производителей
+          +e.item
+            img(src="img/adventures/adv2.png", alt="")
+            h3 Своя доставка
+            p в любую точку С-Пб и области
+          +e.item
+            img(src="img/adventures/adv3.png", alt="")
+            h3 Бесплатный замер
+            p и составление сметы
+          +e.item
+            img(src="img/adventures/adv4.png", alt="")        
+            h3 Юридическое оформление
+            p сделок
+
+    +about
+
     
 
 

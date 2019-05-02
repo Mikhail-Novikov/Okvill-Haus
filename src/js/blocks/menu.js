@@ -1,16 +1,15 @@
-
 export default intializeMenu;
 
 	var settings = {
-		shrinktogglerAfter: 'firstpage', // shrink hamburgerui UL to just show last LI with hamburger icon when user scrolls the page down? 'firstpage' or px number (ie: 200)
-		dismissmenuDelay: 200 // delay in miliseconds after user clicks on full screen menu before hiding it
+		shrinktogglerAfter: 'firstpage',
+		dismissmenuDelay: 200
 	}
 
 	function intializeMenu(){
-		var $menuwrapper = $('#hamburgericonmenuwrapper')
-		var $fullscreenmenu = $menuwrapper.find('#fullscreenmenu')
-		var $hamburgerui = $('#hamburgerui')
-		var $toggler = $('#navtoggler').parent()
+		var $menuwrapper = $('.hamburger-icon-menu-wrapper')
+		var $fullscreenmenu = $menuwrapper.find('.full-screen-menu')
+		var $hamburgerui = $('.hamburger-ui')
+		var $toggler = $('.nav-toggler').parent()
 		var scrolltop
 		var strinkafter
 		var shrinktimer

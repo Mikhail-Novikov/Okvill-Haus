@@ -1,0 +1,54 @@
+mixin bannerHome
+  +b.banner-home
+    .container
+      .row
+        .col-xs-18.col-md-18.col-lg-12
+          +e.DIV.item-big
+            +b.DIV.slide.js-slide-big
+              ul
+                li(data-bg='img/banner-home/big-1.png')
+                  +e.DIV.caption 
+                    .d-inline-flex.flex-column.text-left 
+                      strong.d-block.mb-5 Дом в Парголово.
+                      p Выполненные работы: виниловый сайдинг.
+                li(data-bg='img/banner-home/small-1.png')
+                  +e.DIV.caption 
+                    .d-inline-flex.flex-column.text-left 
+                      strong.d-block.mb-5 Дача в Подмосковье.
+                      p Выполненные работы: водосточные системы.
+                li(data-bg='img/banner-home/small-4.png')
+                  +e.DIV.caption 
+                    .d-inline-flex.flex-column.text-left 
+                      strong.d-block.mb-5 Дом в Митьково.
+                      p Выполненные работы: газонная решётка.
+                li(data-bg='https://picsum.photos/1200/490/?random')
+                  +e.DIV.caption 
+                    .d-inline-flex.flex-column.text-left 
+                      strong.d-block.mb-5 Фазенда в чертогах.
+                      p Выполненные работы: стрижка газонов.
+                li(data-bg='https://picsum.photos/1300/490/?random')
+
+        .col-xs-16.col-md-18.col-lg-6.d-sm-none.d-lg-block
+          +e.DIV.item-small.d-sm-inline-block.d-lg-block
+            img(src="img/banner-home/small-1.png", alt="")
+          +e.DIV.item-small.d-sm-inline-block.d-lg-block
+            .slide.slide-small.js-slide-small
+              ul
+                li(data-bg='img/banner-home/small-2.png')
+                |         
+                li(data-bg='img/banner-home/small-3.png')
+
+      .row
+        .col-xs-16.col-md-9.col-lg-6
+          +e.DIV.item-small
+            .slide.slide-small.js-slide-small
+              ul
+                li(data-bg='img/banner-home/small-3.png')
+                |         
+                li(data-bg='img/banner-home/small-5.png')
+        .col-xs-16.col-md-9.col-lg-6
+          +e.DIV.item-small
+            img(src="img/banner-home/small-4.png", alt="")
+        .col-xs-16.col-md-18.col-lg-6.d-sm-none.d-lg-block
+          +e.DIV.item-small
+            img(src="img/banner-home/small-5.png", alt="")

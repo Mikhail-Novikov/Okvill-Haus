@@ -1,0 +1,15 @@
+.promo {
+  border: 1px solid #e2e1dd;
+  &__container{
+    background-color: #e2e1dd;
+    background: url("../img/bg-promo.png") ;
+    background-size: cover;
+    margin-top: 1px;
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+}

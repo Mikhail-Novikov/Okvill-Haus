@@ -1,0 +1,26 @@
+.adventures {
+  background-color: #f5f3f7;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__item {
+    padding: 15px;
+    @media (max-width: 800px) { /* 3rd breaking point */
+      max-width: 320px;
+      box-shadow: 0.125rem 0.1875rem 2rem rgba(89, 86, 84, 0.15);
+      background-color: #fefefe;
+      transition: box-shadow 0.3s;
+      margin: 0 auto 30px;
+    }
+  }
+  img {
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 20px;
+    color: #5d7784;
+    padding: 8px 25px;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+}

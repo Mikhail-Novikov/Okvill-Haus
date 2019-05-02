@@ -1,2 +1,22 @@
 mixin footer
-  footer.page-footer  
+  +b.FOOTER.page-footer
+    .container
+      +e.wrap
+        .row
+          .col-xs-18.col-md-18.col-lg-5
+            +e.wrap-left
+              img(src="img/logo-f.png", alt="")
+
+              p Профессиональная установка
+              p кровли, сайдинга, водостоков.
+
+              .nav
+                +b.societ.pr-10.d-md-flex
+                  +e.A(href=".") 
+                    +icon-svg('vk')
+                  +e.A(href=".") 
+                    +icon-svg('instagram-logo')
+                  +e.A(href=".") 
+                    +icon-svg('facebook-logo')
+
+              p © 2019 | Оквилл Хаус

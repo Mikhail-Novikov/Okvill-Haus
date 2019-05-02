@@ -1,0 +1,28 @@
+.banner-home {
+  img {
+    display: block;
+    width: 100%;
+  }
+  &__item-big {
+    margin-bottom: 30px;    
+  }
+  &__item-small {
+    margin-bottom: 30px;
+  }
+
+  .slide {
+    li {
+      text-align: center;
+    }
+    &__caption{
+      display: inline-block;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(251, 255, 255, 0.69);
+      padding: 15px;
+    }
+  }
+  
+}
