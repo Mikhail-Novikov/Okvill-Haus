@@ -1,5 +1,8 @@
 .fhone {
   transition: 0.1s;
+  svg {
+    fill: #000;
+  }  
   &__tel{
     span {
       color: #000;
@@ -13,9 +16,33 @@
     span:last-child {
       font-family: "HelveticaNeueCyr-Bold";
       font-size: 26px;
-    }    
+    }
   }
-  &:hover a span, &:hover{
+  &:hover a span, &:hover, &:hover svg {
     color: $link-menu-hover !important;
+    fill: $link-menu-hover !important;
+  }
+}
+
+.page-footer  {
+  .fhone {
+    padding-bottom: 15px;
+    a span {
+      color: #9ca8ab;
+    }
+    svg {
+      height: 15px;
+      width: 15px;
+      fill: #9ca8ab;
+    }
+  }
+  .footer-callback {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    @media (max-width: 800px) { 
+      bottom: auto;
+      top: 0;
+    }
   }
 }

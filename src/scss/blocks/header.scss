@@ -1,11 +1,11 @@
 .header {
   padding: 15px 0;
   &__logo-container {
-    padding-top: 20px;
+    padding: 20px 20px 15px 0;
   }
   .title {
     font-size: 20px;
-    padding: 10px 30px;
+    padding: 8px 30px 8px;
     font-family: "Pragmatica Bold Cyrillic";
     text-transform: uppercase;
   }
@@ -33,7 +33,9 @@
       &:hover {
         color: $link-menu-hover;
       }
-
+      &:hover svg {
+        fill: $link-menu-hover;
+      }
     }
     &__d-menu{
       overflow: hidden;
@@ -49,6 +51,11 @@
     padding-top: 6px;
     padding-bottom: 15px;
   }
+  svg {
+    height: 15px;
+    width: 15px;
+    fill: #607079;
+  }
   @include media-breakpoint-down(lg) {
     &__logo-container {
       float: left;
@@ -59,4 +66,9 @@
       float: none;
     }
   }
+  @include media-breakpoint-up(md) {
+    .sep-r {
+      border-right: 1px solid #dddddd;
+    }
+  }  
 }

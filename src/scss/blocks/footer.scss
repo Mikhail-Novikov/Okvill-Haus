@@ -1,16 +1,21 @@
 .page-footer  {
-  height: 286px;
   background-color: #283335;
   padding-top: 15px;
   padding-bottom: 15px;
   &__wrap {
     background-color: rgba(255, 255, 255, 0.2);
     height: 100%;
-    padding: 20px 0;
+    padding: 20px;
+    position: relative;
   }
+  a {
+    &:hover {
+      color: $link-menu-footer-hover !important;
+    }
+  } 
   &__wrap-left {
-    padding: 0 50px;
-    color: #9ca8ab;
+    padding: 0 30px;
+    color: $link-menu-footer-hover;
     font-size: 13px;
     img {
       margin-bottom: 20px;
@@ -19,13 +24,50 @@
       margin-top: 30px;
       margin-bottom: 30px;
       a {
-        border-left-color: #9ca8ab;
+        border-left-color: $link-menu-footer-hover;
         svg {
-          color: #9ca8ab;
+          color: $link-menu-footer-hover;
+          fill: $link-menu-footer-hover;
         }
+        &:hover svg  {
+          fill: $link-menu !important;
+        }        
       }      
     }
-
+    @media (max-width: 800px) { 
+      padding: 0;
+    }
+  }
+  &__wrap-right {
+    padding: 0 30px 0 0;
+    color: #fff;
+    font-size: 13px;
+  }  
+  .footer-nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media (max-width: 800px) { 
+      padding-top: 0;
+    }
+    li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .sep {
+      border-left: 1px solid $collection-border-color;
+      &:last-child {
+        display: none;
+      }
+      @media (max-width: 800px) { 
+        display: none;
+      }
+    }
+    a {
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      padding: 8px;
+    }
   }
   .container {
     height: 100%;  

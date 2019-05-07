@@ -43,12 +43,12 @@
 }
 
 .header__logo-container {
-  padding-top: 1.25rem;
+  padding: 1.25rem 1.25rem 0.9375rem 0;
 }
 
 .header .title {
   font-size: 1.25rem;
-  padding: 0.625rem 1.875rem;
+  padding: 0.5rem 1.875rem 0.5rem;
   font-family: "Pragmatica Bold Cyrillic";
   text-transform: uppercase;
 }
@@ -84,6 +84,10 @@
   color: #db2527;
 }
 
+.header .nav a:hover svg {
+  fill: #db2527;
+}
+
 .header .nav__d-menu {
   overflow: hidden;
   padding: 0;
@@ -97,6 +101,12 @@
   padding-bottom: 0.9375rem;
 }
 
+.header svg {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  fill: #607079;
+}
+
 .header__logo-container {
   float: left;
 }
@@ -104,6 +114,12 @@
 @media (max-width: 49.99875rem) {
   .header__logo-container {
     float: none;
+  }
+}
+
+@media (min-width: 50rem) {
+  .header .sep-r {
+    border-right: 0.0625rem solid #dddddd;
   }
 }
 
@@ -128,10 +144,15 @@
 .nav .societ a svg {
   height: 0.8125rem;
   width: 1.25rem;
+  fill: #607079;
 }
 
 .fhone {
   transition: 0.1s;
+}
+
+.fhone svg {
+  fill: #000;
 }
 
 .fhone__tel span {
@@ -150,8 +171,36 @@
   font-size: 1.625rem;
 }
 
-.fhone:hover a span, .fhone:hover {
+.fhone:hover a span, .fhone:hover, .fhone:hover svg {
   color: #db2527 !important;
+  fill: #db2527 !important;
+}
+
+.page-footer .fhone {
+  padding-bottom: 0.9375rem;
+}
+
+.page-footer .fhone a span {
+  color: #9ca8ab;
+}
+
+.page-footer .fhone svg {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  fill: #9ca8ab;
+}
+
+.page-footer .footer-callback {
+  position: absolute;
+  right: 1.875rem;
+  bottom: 0;
+}
+
+@media (max-width: 50rem) {
+  .page-footer .footer-callback {
+    bottom: auto;
+    top: 0;
+  }
 }
 
 .z-depth-1, .btn, .btn-large, .btn-small, .btn-floating {
@@ -692,8 +741,7 @@ button.btn-floating {
   /*padding inside each link */
   color: white;
   outline: none;
-  background: darkred;
-  /*background of tabs (default state)*/
+  background: #fff;
   transition: all 0.5s;
 }
 
@@ -711,11 +759,6 @@ button.btn-floating {
   color: white;
 }
 
-.hamburger-ui li a:hover {
-  background: red;
-  /*background of UI links for hover state  */
-}
-
 .nav-toggler {
   /* Main hamburger icon to toggle menu state */
   display: block;
@@ -728,7 +771,7 @@ button.btn-floating {
   height: 2.5em;
   padding: 0;
   text-indent: -62.5rem;
-  border: 0.6em solid white;
+  border: 0.6em solid #000;
   /* border color */
   border-width: 0.6em 0;
   cursor: pointer;
@@ -748,7 +791,7 @@ button.btn-floating {
   top: 50%;
   margin-top: -0.3em;
   left: 0;
-  background: white;
+  background: #000;
   /* stripes background color. Change to match border color of parent label above */
   transition: all 0.3s ease-in;
 }
@@ -775,6 +818,10 @@ button.btn-floating {
   transition: visibility 0s 0.5s, -webkit-transform 0.5s;
   transition: transform 0.5s, visibility 0s 0.5s;
   transition: transform 0.5s, visibility 0s 0.5s, -webkit-transform 0.5s;
+}
+
+.full-screen-menu svg {
+  fill: #fff;
 }
 
 .full-screen-menu ul {
@@ -1141,7 +1188,6 @@ button.btn-floating {
 }
 
 .page-footer {
-  height: 17.875rem;
   background-color: #283335;
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
@@ -1150,11 +1196,16 @@ button.btn-floating {
 .page-footer__wrap {
   background-color: rgba(255, 255, 255, 0.2);
   height: 100%;
-  padding: 1.25rem 0;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.page-footer a:hover {
+  color: #9ca8ab !important;
 }
 
 .page-footer__wrap-left {
-  padding: 0 3.125rem;
+  padding: 0 1.875rem;
   color: #9ca8ab;
   font-size: 0.8125rem;
 }
@@ -1174,10 +1225,88 @@ button.btn-floating {
 
 .page-footer__wrap-left .nav a svg {
   color: #9ca8ab;
+  fill: #9ca8ab;
+}
+
+.page-footer__wrap-left .nav a:hover svg {
+  fill: #607079 !important;
+}
+
+@media (max-width: 50rem) {
+  .page-footer__wrap-left {
+    padding: 0;
+  }
+}
+
+.page-footer__wrap-right {
+  padding: 0 1.875rem 0 0;
+  color: #fff;
+  font-size: 0.8125rem;
+}
+
+.page-footer .footer-nav {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+@media (max-width: 50rem) {
+  .page-footer .footer-nav {
+    padding-top: 0;
+  }
+}
+
+.page-footer .footer-nav li {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.page-footer .footer-nav .sep {
+  border-left: 0.0625rem solid #dddddd;
+}
+
+.page-footer .footer-nav .sep:last-child {
+  display: none;
+}
+
+@media (max-width: 50rem) {
+  .page-footer .footer-nav .sep {
+    display: none;
+  }
+}
+
+.page-footer .footer-nav a {
+  color: #fff;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
 }
 
 .page-footer .container {
   height: 100%;
+}
+
+.sub-menu {
+  position: absolute;
+}
+
+.footer-nav .sub-menu {
+  margin-top: 0.9375rem;
+}
+
+.footer-nav .sub-menu a {
+  color: #9ca8ab;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  text-transform: initial;
+  padding: 0.5rem;
+}
+
+.footer-nav .sub-menu a:hover {
+  color: #607079 !important;
+}
+
+.footer-nav .sub-menu li {
+  padding: 0.4375rem 0;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,10 +1,11 @@
+include sub-menu
 mixin footer
   +b.FOOTER.page-footer
     .container
       +e.wrap
         .row
-          .col-xs-18.col-md-18.col-lg-5
-            +e.wrap-left
+          .col-xs-18.col-sm-6.col-md-5.col-lg-5
+            +e.wrap-left.mb-25.mb-sm-0
               img(src="img/logo-f.png", alt="")
 
               p Профессиональная установка
@@ -20,3 +21,37 @@ mixin footer
                     +icon-svg('facebook-logo')
 
               p © 2019 | Оквилл Хаус
+
+          .col-xs-18.col-sm-12.col-md-13.col-lg-13
+            +e.wrap-right
+              nav.footer-nav
+                ul.d-md-flex.justify-content-between
+                  li
+                    a(href="#") Компания
+                  li.sep
+
+                  li
+                    a(href="#") Услуги
+                    .d-none.d-md-block
+                      +subMenu
+                  li.sep
+
+                  li: a(href="#") Цены
+                  li.sep
+
+                  li: a(href="#") Выполненные работы
+                  li.sep
+
+                  li: a(href="#") Контакты
+                  li.sep
+
+              .footer-callback.d-none.d-sm-block
+                +b.fhone
+                  +icon-svg('call-answer')
+                  +e.A(href="tel:79219156551").tel
+                    span +7 (921)
+                    span 915-65-51
+
+                button.waves-effect.waves-red.btn 
+                  span Нужна консультация?
+                  img.ml-10(src="img/btn-consult.png", alt="консультация")

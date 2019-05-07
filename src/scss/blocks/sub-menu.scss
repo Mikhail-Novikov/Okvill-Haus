@@ -1,0 +1,24 @@
+.sub-menu {
+  position: absolute;
+}
+
+.footer-nav {
+  .sub-menu {
+    margin-top: 15px;
+    a {
+      color: #9ca8ab;
+      font-size: 13px;
+      font-weight: 300;
+      text-transform: initial;
+      padding: 8px;
+      &:hover {
+        color: $link-menu !important;
+      }
+    }  
+    li {
+      padding: 7px 0;
+    }
+  }
+    
+
+}

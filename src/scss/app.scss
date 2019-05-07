@@ -1,9 +1,11 @@
 @import "lib/functions";
 @import "lib/variables";
 @import "lib/mixins";
+// @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../vendors/svg-symbols/svg-symbols.css";
 
 @import "blocks/section";
 @import "blocks/header";
@@ -18,3 +20,5 @@
 @import "blocks/adventures";
 @import "blocks/about";
 @import "blocks/footer";
+@import "blocks/sub-menu";
+
