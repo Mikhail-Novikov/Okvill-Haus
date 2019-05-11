@@ -1,7 +1,9 @@
 .sub-menu {
+  box-shadow: 0 4px 21px rgba(20, 26, 45, 0.11);
   position: absolute;
   left: 0;
   top: 100%;
+  z-index: 99;
 }
 
 .footer-nav {

@@ -42,3 +42,12 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "Graphik-LC-Web";
+	src: url('../fonts/Graphik-Bold-Web.ttf');
+	src: local('../fonts/Graphik-Bold-Web'),
+	local('Graphik-Bold-Web'),
+		url('../fonts/GraphikLCG-Bold.woff') format('woff'),
+		url('../fonts/Graphik-Bold-Web.ttf') format('truetype');
+	font-style: normal;
+}

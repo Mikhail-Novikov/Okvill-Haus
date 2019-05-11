@@ -4,9 +4,12 @@ import intializeMenu from './blocks/menu';
 import bgSlider from './blocks/bg-slider';
 import bgSliderSmall from './blocks/bg-slider-small';
 
+import mapGoogle from './blocks/map';
+
 intializeMenu();
 bgSlider();
 bgSliderSmall();
+mapGoogle();
 
 $('.js-slide-big').slide({
   'slideSpeed': 6000000,

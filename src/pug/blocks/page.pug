@@ -23,5 +23,6 @@ mixin page(title)
       +e.MAIN.__body-inner
         block
       // JS
-      script(src=`js/lib${development ? '' : ''}.js`)      
+      script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAMVuRK48e9494g0NDZUYy5VkDqQHoTNdM')
+      script(src=`js/lib${development ? '' : ''}.js`)
       script(src=`js/app${development ? '' : ''}.js` async='')

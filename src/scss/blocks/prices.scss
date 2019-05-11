@@ -1,0 +1,35 @@
+.grid-prices {
+  width: 100%;
+  border: 1px solid $collection-border-color;
+  border-spacing: 0;
+  margin-bottom: 30px;
+  col {
+    width: 33%;
+  }
+  td, th {
+    padding: 12px;
+  }
+  th {
+    background-color: #db2527;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'HelveticaNeueCyr-Bold';
+    text-transform: uppercase;
+  }
+  td {
+    color: #7a8c96;
+    font-size: 16px;
+  }
+  tr:nth-child(even) {
+    background-color: #f5f3f7;
+  }
+  td:first-child, th:first-child {
+    border-right: 1px solid $collection-border-color;
+  }
+  td {
+    text-align: center;
+  }
+  td:first-child {
+    text-align: left;
+  }
+}

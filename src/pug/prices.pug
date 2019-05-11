@@ -1,0 +1,140 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/h3
+include blocks/breadcrumbs
+include blocks/info
+
++page(pagesList.prices.title)
+  +header
+  .container
+    +breadcrumbs('Цены')
+    .row.align-items-end.mb-30
+      .col-sm-6
+        +h2('Цены')
+      .col-sm-12
+        +infoBtn
+
+  +worksHome
+
+  .container
+    .mb-30
+      +h3('Фасадные панели')
+    table.grid-prices
+      colgroup
+        col
+        col
+        col
+      thead
+        tr
+          th Наименование
+          th Ед. изм.
+          th Цена, руб.
+      tbody
+        tr
+          td Монтаж винилового сайдинга
+          td м
+            sup 2
+          td от 170
+        tr
+          td Монтаж металического сайдинга
+          td м
+            sup 2
+          td от 320
+        tr
+          td Монтаж фиброцементного сайдинга
+          td м
+            sup 2
+          td от 400
+        tr
+          td Монтаж облицовочных панелей
+          td м
+            sup 2
+          td от 250
+        tr
+          td Монтаж паро-гидроизоляции
+          td м
+            sup 2
+          td от 170
+        tr
+          td Монтаж контробрешетки
+          td м
+            sup 2
+          td от 320
+        tr
+          td Монтаж обрешетки
+          td м
+            sup 2
+          td от 400
+        tr
+          td Монтаж утеплителя
+          td м
+            sup 2
+          td от 250
+
+
+    .mb-30
+      +h3('Кровля')
+
+    table.grid-prices
+      colgroup
+        col
+        col
+        col
+      thead
+        tr
+          th Наименование
+          th Ед. изм.
+          th Цена, руб.
+      tbody
+        tr
+          td Монтаж металлочерепицы
+          td м
+            sup 2
+          td от 170
+        tr
+          td Монтаж гибкой черепицы
+          td м
+            sup 2
+          td от 320
+        tr
+          td Монтаж волнистых листов
+          td м
+            sup 2
+          td от 400
+        tr
+          td Монтаж фальцевой кровли
+          td м
+            sup 2
+          td от 250
+        tr
+          td Монтаж профнастила
+          td м
+            sup 2
+          td от 170
+        tr
+          td Монтаж наплавляемой кровли
+          td м
+            sup 2
+          td от 320
+        tr
+          td Монтаж стропильной системы
+          td м
+            sup 2
+          td от 400
+        tr
+          td Монтаж планок для кровельного покрытия
+          td м
+            sup 2
+          td от 250
+
+
+
++footer.__footer

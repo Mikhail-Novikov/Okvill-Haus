@@ -27,6 +27,12 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  color: #7a8c96;
+  font-family: "Graphik-LC-Web";
+  font-size: 1.5rem;
+}
+
 .label {
   color: #121212;
   font-size: 1rem;
@@ -112,7 +118,8 @@ h2 {
 .header .nav a {
   transition: background-color .3s;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
   color: #607079;
   display: block;
   padding: 0.9375rem;
@@ -140,6 +147,7 @@ h2 {
   left: -0.5rem;
   min-width: 15.625rem;
   max-height: 0;
+  opacity: 0;
   overflow: hidden;
   transition: max-height 0.4s linear;
 }
@@ -151,6 +159,7 @@ h2 {
 
 .header .nav__d-menu li:hover .sub-menu {
   max-height: 31.25rem;
+  opacity: 1;
 }
 
 .header .nav__d-menu .dropdown:after,
@@ -302,7 +311,7 @@ h2 {
   display: inline-block;
   height: 2.25rem;
   line-height: 2.25rem;
-  padding: 0 1rem;
+  padding: 0 3.125rem 0 1rem;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
@@ -382,7 +391,7 @@ h2 {
 .btn-large,
 .btn-small,
 .btn-flat {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   outline: 0;
 }
 
@@ -423,17 +432,6 @@ h2 {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-@media (max-width: 74.99875rem) {
-  .btn, .btn-large, .btn-small {
-    height: 1.875rem;
-    line-height: 1.875rem;
-    font-size: 0.75rem;
-  }
-  .btn img, .btn-large img, .btn-small img {
-    max-width: 1.125rem;
-  }
 }
 
 .btn-floating {
@@ -697,121 +695,6 @@ button.btn-floating {
 
 .btn-block {
   display: block;
-}
-
-.waves-effect {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  overflow: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  vertical-align: middle;
-  z-index: 1;
-  transition: .3s ease-out;
-}
-
-.waves-effect .waves-ripple {
-  position: absolute;
-  border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-top: -0.625rem;
-  margin-left: -0.625rem;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.2);
-  transition: all 0.7s ease-out;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  pointer-events: none;
-}
-
-.waves-effect.waves-light .waves-ripple {
-  background-color: rgba(255, 255, 255, 0.45);
-}
-
-.waves-effect.waves-red .waves-ripple {
-  background-color: rgba(244, 67, 54, 0.7);
-}
-
-.waves-effect.waves-yellow .waves-ripple {
-  background-color: rgba(255, 235, 59, 0.7);
-}
-
-.waves-effect.waves-orange .waves-ripple {
-  background-color: rgba(255, 152, 0, 0.7);
-}
-
-.waves-effect.waves-purple .waves-ripple {
-  background-color: rgba(156, 39, 176, 0.7);
-}
-
-.waves-effect.waves-green .waves-ripple {
-  background-color: rgba(76, 175, 80, 0.7);
-}
-
-.waves-effect.waves-teal .waves-ripple {
-  background-color: rgba(0, 150, 136, 0.7);
-}
-
-.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
-  border: 0;
-  font-style: normal;
-  font-size: inherit;
-  text-transform: inherit;
-  background: none;
-}
-
-.waves-effect img, .waves-effect span {
-  position: relative;
-  z-index: -1;
-  vertical-align: middle;
-}
-
-.waves-notransition {
-  transition: none !important;
-}
-
-.waves-circle {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-}
-
-.waves-input-wrapper {
-  border-radius: 0.2em;
-  vertical-align: bottom;
-}
-
-.waves-input-wrapper .waves-button-input {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.waves-circle {
-  text-align: center;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2.5em;
-  border-radius: 50%;
-  -webkit-mask-image: none;
-}
-
-.waves-block {
-  display: block;
-}
-
-/* Firefox Bug: link not triggered */
-.waves-effect .waves-ripple {
-  z-index: -1;
 }
 
 .hamburger-icon-menu-wrapper {
@@ -1390,14 +1273,12 @@ button.btn-floating {
   padding: 0.5rem;
 }
 
-.page-footer .container {
-  height: 100%;
-}
-
 .sub-menu {
+  box-shadow: 0 0.25rem 1.3125rem rgba(20, 26, 45, 0.11);
   position: absolute;
   left: 0;
   top: 100%;
+  z-index: 99;
 }
 
 .footer-nav .sub-menu {
@@ -1437,11 +1318,18 @@ button.btn-floating {
 }
 
 .contacts {
-  margin: 1.875rem 0;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
 }
 
-.contacts p {
+.contacts p, .contacts .text {
   font-size: 1rem;
+  color: #7a8c96;
+}
+
+.contacts .link {
+  color: #f5003b;
+  border-bottom: 0.0625rem dotted #f5003b;
 }
 
 .contacts td {
@@ -1505,6 +1393,62 @@ button.btn-floating {
   border-color: #ff336645;
   outline: 0;
   box-shadow: inset 0 0.0625rem 0.0625rem #ff336630, 0 0 0.5rem #ff336642;
+}
+
+.map {
+  width: 100%;
+  height: 20.625rem;
+  margin-bottom: 1.875rem;
+}
+
+@media (max-width: 37.5rem) {
+  .map {
+    margin: 0 0.9375rem 1.875rem;
+  }
+}
+
+.grid-prices {
+  width: 100%;
+  border: 0.0625rem solid #dddddd;
+  border-spacing: 0;
+  margin-bottom: 1.875rem;
+}
+
+.grid-prices col {
+  width: 33%;
+}
+
+.grid-prices td, .grid-prices th {
+  padding: 0.75rem;
+}
+
+.grid-prices th {
+  background-color: #db2527;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'HelveticaNeueCyr-Bold';
+  text-transform: uppercase;
+}
+
+.grid-prices td {
+  color: #7a8c96;
+  font-size: 1rem;
+}
+
+.grid-prices tr:nth-child(even) {
+  background-color: #f5f3f7;
+}
+
+.grid-prices td:first-child, .grid-prices th:first-child {
+  border-right: 0.0625rem solid #dddddd;
+}
+
+.grid-prices td {
+  text-align: center;
+}
+
+.grid-prices td:first-child {
+  text-align: left;
 }
 
 /*# sourceMappingURL=app.css.map */

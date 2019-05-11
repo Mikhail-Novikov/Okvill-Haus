@@ -21,26 +21,30 @@ include blocks/info
       .col-sm-12
         +infoBtn
     .row.contacts
-      .col-sm-10
+      .col-md-10
         table.mt-sm-60
           tr
             td.label Наименование:
-            td Общество с ограниченной ответственностью «Оквилл Хаус»
+            td
+              p Общество с ограниченной ответственностью «Оквилл Хаус»
           tr
             td.label Адрес:
-            td 198320, С-Пб, г. Красное село, ул. Киевская, д. 2, корп. ЛИТ А, Пб.
+            td
+              p 198320, С-Пб, г. Красное село, ул. Киевская, д. 2, корп. ЛИТ А, Пб.
           tr
             td.label Телефон:
             td
-              a.link-tel(href="tel: 88127421778") +7 (921)
-                span 555-45-45
+              +b.fhone
+                +e.A(href="tel:79219156551").tel
+                  span.text +7 (921)
+                  span 915-65-51
           tr
             td.label E-mail:
             td
               a.link-crimson(href="mailto: okvill@yandex.ru")
-                span okvill@yandex.ru
+                span.link okvill@yandex.ru
 
-      .col-sm-8
+      .col-md-8
         form.contact-form
           .forms-item
             input#nic.form-control(type='text' name="nic" placeholder="Ваше имя *")
@@ -55,6 +59,9 @@ include blocks/info
           .text-center
             a(href="#").btn Отправить
               img(src="img/arrow_little.png", alt="отправить")
+
+    .row
+        #map.map(data-lat-center="59.729023" , data-lng-center="30.068472" , data-marker="img/map-marker-icon.png")
 
 
 +footer.__footer
