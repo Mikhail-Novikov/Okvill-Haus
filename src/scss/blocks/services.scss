@@ -1,0 +1,11 @@
+.service-desc {
+  margin-top: 50px;
+  &__pic {
+    margin: 0 30px 15px 0;
+    @include media-breakpoint-down(lg) {
+      float: left;
+
+    }
+  }
+
+}

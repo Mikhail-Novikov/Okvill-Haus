@@ -23,8 +23,15 @@
   }
 }
 
+.text {
+  color: #7a8c96;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 h2 {
   font-size: 2rem;
+  font-family: "Graphik-LC-Web";
 }
 
 h3 {
@@ -1449,6 +1456,15 @@ button.btn-floating {
 
 .grid-prices td:first-child {
   text-align: left;
+}
+
+.service-desc {
+  margin-top: 3.125rem;
+}
+
+.service-desc__pic {
+  margin: 0 1.875rem 0.9375rem 0;
+  float: left;
 }
 
 /*# sourceMappingURL=app.css.map */

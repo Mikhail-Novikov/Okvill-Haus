@@ -1,0 +1,38 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/breadcrumbs
+include blocks/info
+
++page(pagesList.contacts.title)
+  +header
+  .container.mb-30
+    +breadcrumbs('Сайдинг')
+    .row.align-items-end
+      .col-sm-6
+        +h2('Сайдинг')
+      .col-sm-12
+        +infoBtn
+
+  +worksHome
+
+  .container
+    +b.service-desc.d-block.d-md-flex
+      +e.pic
+        img(src="img/services/docke_logo.png", alt="сайдинга «Оквилл Хаус»")
+
+      +e.P.item.text Высококачественная серия винилового сайдинга «Оквилл Хаус»,
+        |ставшая своеобразным эталоном рынка, которую постоянно,
+        |но безуспешно пытаются копировать некоторые конкуренты.
+        |Безуспешно, потому что главный секрет сайдинга «Оквилл Хаус» — его качество и репутация.
+        |Именно эта серия в свое время была заслуженно награждена такими высокими наградами
+        |как «Бренд года/EFFIE» и «Народная марка».
+
+
