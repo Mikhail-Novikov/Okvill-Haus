@@ -1,0 +1,13 @@
+.breadcrumb {
+  font-size: 12px;
+  padding: 1rem 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  li {
+    display: inline-block;
+  }
+  a {
+    color: $link-menu-hover;
+    border-bottom: 1px dotted $link-menu-hover;
+  }
+}

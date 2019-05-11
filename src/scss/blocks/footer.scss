@@ -12,7 +12,7 @@
     &:hover {
       color: $link-menu-footer-hover !important;
     }
-  } 
+  }
   &__wrap-left {
     padding: 0 30px;
     color: $link-menu-footer-hover;
@@ -31,10 +31,10 @@
         }
         &:hover svg  {
           fill: $link-menu !important;
-        }        
-      }      
+        }
+      }
     }
-    @media (max-width: 800px) { 
+    @media (max-width: 800px) {
       padding: 0;
     }
   }
@@ -42,23 +42,24 @@
     padding: 0 30px 0 0;
     color: #fff;
     font-size: 13px;
-  }  
+  }
   .footer-nav {
     padding-top: 10px;
     padding-bottom: 10px;
-    @media (max-width: 800px) { 
+    @media (max-width: 800px) {
       padding-top: 0;
     }
     li {
       padding-top: 10px;
       padding-bottom: 10px;
+      position: relative;
     }
     .sep {
       border-left: 1px solid $collection-border-color;
       &:last-child {
         display: none;
       }
-      @media (max-width: 800px) { 
+      @media (max-width: 800px) {
         display: none;
       }
     }
@@ -70,6 +71,6 @@
     }
   }
   .container {
-    height: 100%;  
+    height: 100%;
   }
 }

@@ -1,0 +1,60 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/breadcrumbs
+include blocks/info
+
++page(pagesList.contacts.title)
+  +header
+  .container
+    +breadcrumbs('Контакты')
+    .row.align-items-end
+      .col-sm-6
+        +h2('Контакты')
+      .col-sm-12
+        +infoBtn
+    .row.contacts
+      .col-sm-10
+        table.mt-sm-60
+          tr
+            td.label Наименование:
+            td Общество с ограниченной ответственностью «Оквилл Хаус»
+          tr
+            td.label Адрес:
+            td 198320, С-Пб, г. Красное село, ул. Киевская, д. 2, корп. ЛИТ А, Пб.
+          tr
+            td.label Телефон:
+            td
+              a.link-tel(href="tel: 88127421778") +7 (921)
+                span 555-45-45
+          tr
+            td.label E-mail:
+            td
+              a.link-crimson(href="mailto: okvill@yandex.ru")
+                span okvill@yandex.ru
+
+      .col-sm-8
+        form.contact-form
+          .forms-item
+            input#nic.form-control(type='text' name="nic" placeholder="Ваше имя *")
+          .forms-item
+            input.form-control(type='text' name="" placeholder="Ваш E-mail *")
+          .forms-item
+            input.form-control.novalid(type='text' name="" placeholder="Тема")
+          .forms-item
+            input.form-control.novalid(type='text' name="" placeholder="Телефон")
+          .forms-item
+            textarea.form-textarea(type='text' name="" placeholder="Сообщение")
+          .text-center
+            a(href="#").btn Отправить
+              img(src="img/arrow_little.png", alt="отправить")
+
+
++footer.__footer

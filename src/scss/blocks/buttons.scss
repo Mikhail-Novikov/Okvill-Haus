@@ -44,6 +44,11 @@ $button-floating-small-size: $button-height * .9 !default;
 $button-flat-color: #343434 !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
 
+// Info buttons
+$button-info-color-base: linear-gradient(to right, #e9315c 0%, #ff009d 100%) !default;;
+$button-info-color-gray: linear-gradient(to right, #c7ced0 0%, #d0d9db 100%);
+$button-flat-disabled-color: lighten(#999, 10%) !default;
+
 // Floating buttons
 $button-floating-background: $secondary-color !default;
 $button-floating-background-hover: $button-floating-background !default;
@@ -65,6 +70,26 @@ $button-floating-radius: 50% !default;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
 }
+
+.btn-info {
+  padding: 10px 35px 10px 8px;
+  height: 56px;
+  width: 225px;
+  border-radius: 18px;
+  font-size: 12px !important;
+  line-height: 1.5;
+  margin: 0 30px 0 0;
+  position: relative;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.btn-info-gray {
+    background: $button-info-color-gray;
+    box-shadow: 6px 7px 24px rgba(107, 110, 111, 0.33);
+  }
+}
+
+
 
 // Disabled shared style
 .btn.disabled,
@@ -123,6 +148,7 @@ $button-floating-radius: 50% !default;
   background-image: $secondary-gradient;
   text-align: center;
   letter-spacing: .5px;
+  position: relative;
   @extend .z-depth-1;
   transition: background-image .2s ease-out;
   cursor: pointer;
@@ -130,6 +156,13 @@ $button-floating-radius: 50% !default;
     background-color: $button-raised-background-hover;
     background-image: $secondary-gradient-half;
     @extend .z-depth-1-half;
+  }
+
+  img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   @include media-breakpoint-down(md) {

@@ -1,0 +1,6 @@
+mixin breadcrumbs(b1, b2)
+  nav(aria-label="breadcrumb")
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="#") Главная
+      li.breadcrumb-item.active #{b1}

@@ -9,6 +9,30 @@
   margin: 0.9375rem;
 }
 
+.title-line {
+  display: inline-block;
+  border-bottom: 0.0625rem solid #ccc;
+  width: 1.25rem;
+  text-align: center;
+}
+
+@media (min-width: 37.5rem) {
+  .title-line {
+    width: 6.25rem;
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.label {
+  color: #121212;
+  font-size: 1rem;
+  font-family: 'HelveticaNeueCyr-Bold';
+}
+
 .content p {
   font-size: 1rem;
   line-height: 1.625rem;
@@ -40,6 +64,19 @@
 
 .header {
   padding: 0.9375rem 0;
+  margin-bottom: 0.0625rem;
+  box-shadow: 0.375rem 0.4375rem 3.875rem rgba(0, 0, 0, 0.11);
+  border-bottom: 0.0625rem solid #dddddd;
+  position: relative;
+}
+
+.header:after {
+  content: "";
+  display: block;
+  border-bottom: 0.0625rem solid #fff;
+  position: absolute;
+  bottom: -0.125rem;
+  width: 100%;
 }
 
 .header__logo-container {
@@ -53,12 +90,13 @@
   text-transform: uppercase;
 }
 
-.header .nav ul {
+.header .nav ul:not(.sub-menu) {
   margin: 0.0625rem 0 0 0;
   padding: 0 0.9375rem;
   display: -ms-flexbox;
   display: flex;
-  background-color: #f5f3f7;
+  background: #f7f5f9;
+  background: linear-gradient(180deg, #f7f5f9 0%, white 100%);
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-pack: justify;
@@ -68,6 +106,7 @@
 .header .nav li {
   transition: background-color .3s;
   padding: 0;
+  position: relative;
 }
 
 .header .nav a {
@@ -89,11 +128,56 @@
 }
 
 .header .nav__d-menu {
-  overflow: hidden;
   padding: 0;
   color: #fff;
   width: 100%;
   border-top: 0.0625rem solid #dddddd;
+}
+
+.header .nav__d-menu .sub-menu {
+  background-color: #fff;
+  padding: 0.5rem;
+  left: -0.5rem;
+  min-width: 15.625rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s linear;
+}
+
+.header .nav__d-menu .sub-menu a {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header .nav__d-menu li:hover .sub-menu {
+  max-height: 31.25rem;
+}
+
+.header .nav__d-menu .dropdown:after,
+.header .nav__d-menu .menu-item-has-children:after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 0.125rem solid #607079;
+  border-width: 0 0 0.125rem 0.125rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.1875rem;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.header .nav__d-menu .dropdown:hover:after,
+.header .nav__d-menu .menu-item-has-children:hover:after {
+  border-color: #db2527;
+  margin-top: 0;
+  -webkit-transform: translateY(-50%) rotate(135deg);
+  transform: translateY(-50%) rotate(135deg);
 }
 
 .header .fhone {
@@ -224,6 +308,26 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.btn-info {
+  padding: 0.625rem 2.1875rem 0.625rem 0.5rem;
+  height: 3.5rem;
+  width: 14.0625rem;
+  border-radius: 1.125rem;
+  font-size: 0.75rem !important;
+  line-height: 1.5;
+  margin: 0 1.875rem 0 0;
+  position: relative;
+}
+
+.btn-info:last-child {
+  margin-right: 0;
+}
+
+.btn-info.btn-info-gray {
+  background: linear-gradient(to right, #c7ced0 0%, #d0d9db 100%);
+  box-shadow: 0.375rem 0.4375rem 1.5rem rgba(107, 110, 111, 0.33);
+}
+
 .btn.disabled, .disabled.btn-large, .disabled.btn-small,
 .btn-floating.disabled,
 .btn-large.disabled,
@@ -303,6 +407,7 @@
   background-image: linear-gradient(to right, #e9315c 0%, #f1698a 100%);
   text-align: center;
   letter-spacing: 0.03125rem;
+  position: relative;
   transition: background-image .2s ease-out;
   cursor: pointer;
 }
@@ -310,6 +415,14 @@
 .btn:hover, .btn-large:hover, .btn-small:hover {
   background-color: #ec486e;
   background-image: linear-gradient(to left, #e9315c 0%, #f1698a 100%);
+}
+
+.btn img, .btn-large img, .btn-small img {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (max-width: 74.99875rem) {
@@ -947,15 +1060,10 @@ button.btn-floating {
   }
 }
 
-.promo {
-  border: 0.0625rem solid #e2e1dd;
-}
-
 .promo__container {
   background-color: #e2e1dd;
   background: url("../img/bg-promo.png");
   background-size: cover;
-  margin-top: 0.0625rem;
 }
 
 .promo__container img {
@@ -1258,6 +1366,7 @@ button.btn-floating {
 .page-footer .footer-nav li {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+  position: relative;
 }
 
 .page-footer .footer-nav .sep {
@@ -1287,10 +1396,12 @@ button.btn-floating {
 
 .sub-menu {
   position: absolute;
+  left: 0;
+  top: 100%;
 }
 
 .footer-nav .sub-menu {
-  margin-top: 0.9375rem;
+  min-width: 15.625rem;
 }
 
 .footer-nav .sub-menu a {
@@ -1307,6 +1418,93 @@ button.btn-floating {
 
 .footer-nav .sub-menu li {
   padding: 0.4375rem 0;
+}
+
+.breadcrumb {
+  font-size: 0.75rem;
+  padding: 1rem 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.breadcrumb li {
+  display: inline-block;
+}
+
+.breadcrumb a {
+  color: #db2527;
+  border-bottom: 0.0625rem dotted #db2527;
+}
+
+.contacts {
+  margin: 1.875rem 0;
+}
+
+.contacts p {
+  font-size: 1rem;
+}
+
+.contacts td {
+  vertical-align: top;
+  padding: 0.5rem;
+}
+
+.contacts .contacts-item {
+  margin-bottom: 1.5625rem;
+  width: calc(50% - 1.875rem);
+  font-size: 1rem;
+}
+
+.contacts .contact-form {
+  padding: 1.5625rem 0.9375rem;
+  box-shadow: 0.125rem 0.3125rem 2.875rem rgba(97, 97, 97, 0.26);
+  background-color: #ffffff;
+  background-image: linear-gradient(-225deg, #e4e7e7 0%, #f5f8f8 100%);
+  position: relative;
+}
+
+.contacts .contact-form a.btn, .contacts .contact-form a.btn-large, .contacts .contact-form a.btn-small {
+  width: 13.125rem;
+}
+
+.contacts .forms-item {
+  margin-bottom: 0.9375rem;
+  font-size: 0.875rem;
+}
+
+.contacts .form-control {
+  height: 2.5625rem;
+  border-radius: 1.3125rem;
+  border: 0.0625rem solid #e6e7e7;
+  background-color: #ffffff;
+  padding: 0.375rem 1.5rem;
+  width: 100%;
+}
+
+.contacts .form-control:focus {
+  border-color: #ff336645;
+  outline: 0;
+  box-shadow: inset 0 0.0625rem 0.0625rem #ff336630, 0 0 0.5rem #ff336642;
+}
+
+.contacts .form-control.novalid {
+  background-color: #f2f5f5;
+}
+
+.contacts .form-textarea {
+  width: 100%;
+  height: 8.125rem;
+  border-radius: 1.3125rem;
+  border: 0.0625rem solid #e6e7e7;
+  background-color: #ffffff;
+  padding: 0.375rem 1.5rem;
+  outline: none;
+}
+
+.contacts .form-textarea:focus {
+  border-color: #ff336645;
+  outline: 0;
+  box-shadow: inset 0 0.0625rem 0.0625rem #ff336630, 0 0 0.5rem #ff336642;
 }
 
 /*# sourceMappingURL=app.css.map */

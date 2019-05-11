@@ -1,5 +1,17 @@
 .header {
   padding: 15px 0;
+  margin-bottom: 1px;
+  box-shadow: 6px 7px 62px rgba(0, 0, 0, 0.11);
+  border-bottom: 1px solid $collection-border-color;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+  }
   &__logo-container {
     padding: 20px 20px 15px 0;
   }
@@ -10,17 +22,20 @@
     text-transform: uppercase;
   }
   .nav {
-    ul {
+    ul:not(.sub-menu) {
       margin: 1px 0 0 0;
       padding: 0 15px;
       display: flex;
-      background-color: #f5f3f7;
+      background: rgb(247, 245, 249);
+      background: linear-gradient(180deg, rgba(247, 245, 249, 1) 0%, rgba(255, 255, 255, 1) 100%);
       flex-direction: row;
       justify-content: space-between;
+
     }
     li {
       transition: background-color .3s;
       padding: 0;
+      position: relative;
     }
     a {
       transition: background-color .3s;
@@ -37,13 +52,57 @@
         fill: $link-menu-hover;
       }
     }
-    &__d-menu{
-      overflow: hidden;
+    &__d-menu {
       padding: 0;
       color: #fff;
-      
       width: 100%;
       border-top: 1px solid $collection-border-color;
+      .sub-menu {
+        background-color: #fff;
+        padding: 8px;
+        left: -8px;
+        min-width: 250px;
+        max-height: 0;
+        overflow: hidden;
+        transition:max-height 0.4s linear;
+        a {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+
+      }
+      li {
+        &:hover {
+          .sub-menu {
+             max-height: 500px;
+          }
+        }
+      }
+      .dropdown,
+      .menu-item-has-children {
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border: 2px solid $link-menu;
+          border-width: 0 0 2px 2px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -3px;
+          transform: translateY(-50%) rotate(-45deg);
+          transition: transform 0.3s;
+        }
+      }
+      .dropdown,
+      .menu-item-has-children {
+        &:hover:after {
+          border-color: $link-menu-hover;
+          margin-top: 0;
+          transform: translateY(-50%) rotate(135deg);
+        }
+      }
     }
 
   }
@@ -70,5 +129,5 @@
     .sep-r {
       border-right: 1px solid #dddddd;
     }
-  }  
+  }
 }

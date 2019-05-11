@@ -1,10 +1,12 @@
 .sub-menu {
   position: absolute;
+  left: 0;
+  top: 100%;
 }
 
 .footer-nav {
   .sub-menu {
-    margin-top: 15px;
+    min-width: 250px;
     a {
       color: #9ca8ab;
       font-size: 13px;
@@ -14,11 +16,11 @@
       &:hover {
         color: $link-menu !important;
       }
-    }  
+    }
     li {
       padding: 7px 0;
     }
   }
-    
+
 
 }
