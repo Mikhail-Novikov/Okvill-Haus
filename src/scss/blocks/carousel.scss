@@ -1,0 +1,18 @@
+.carousel {
+  position: relative;
+  .slick-slide div {
+    border: 1px solid #e4e3e5;
+    margin: 0 15px 15px;
+  }
+
+  &--cart {
+    margin-left: 30px;
+  }
+
+  .slick-arrow.arrow-left {
+    left: -30px;
+  }
+  .slick-arrow.arrow-right {
+    right: -30px;
+  }
+}

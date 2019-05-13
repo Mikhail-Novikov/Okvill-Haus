@@ -9,3 +9,76 @@
   }
 
 }
+
+.service-cart{
+  height: 490px;
+  .container {
+    background-color: #f8f7f9;
+    height: 100%;
+  }
+  &__wrap {
+    padding: 40px 40px 40px 0;
+  }
+  &__wrap-pic {
+    width: 100%;
+    height: 320px;
+    box-shadow: 11px 19px 62px rgba(185, 185, 185, 0.27);
+    background-color: #ffffff;
+  }
+}
+
+.control {
+
+  &__wrap {
+    padding-left: 30px;
+  }
+  &__inf-price, &__buttons {
+    width: 208px;
+    height: 113px;
+    margin: 15px;
+  }
+
+  &__inf-price {
+    padding: 15px 8px 15px 15px;
+    font-family: "Graphik-LC-Web";
+    color: #7a8c96;
+    small {
+      font-size: 15px;
+      padding-bottom: 15px;
+      display: inline-block;
+    }
+    &:first-child span {
+      font-size: 28px;
+
+    }
+    &:nth-child(2) span {
+      font-size: 40px;
+      color: #212121;
+    }    
+  }
+
+  &__inf-price {
+    border-color: #eaff00;
+    border-width: 8px;
+    border-style: solid;
+  }
+
+  &__buttons {
+
+    .btn{
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 18px;
+      &:first-child {
+        margin-bottom: 10px;
+        box-shadow: 6px 7px 24px rgba(112, 121, 133, 0.26);
+        background: #ffffff;
+        text-shadow: 3px 3px 12px rgba(33, 33, 33, 0.24);
+        color: #9facbd;
+        text-transform: uppercase;
+      }
+    }
+  }  
+
+}

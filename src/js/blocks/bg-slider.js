@@ -37,7 +37,7 @@ function bgSlider(){
 
           self = this,
           o;
-console.log(list)
+
       o = this.options = $.extend({}, this.defaults, options);
 
       if (o.isShowDots) {
@@ -54,8 +54,8 @@ console.log(list)
             'background': 'url(' + $(this).attr('data-bg') + ')',
             'opacity': '0',
             'z-index': '0',
-              'background-position': '50% 50%',
-  'background-size': 'cover'
+            'background-position': '50% 50%',
+            'background-size': 'cover'
           });
           $(this).attr('data-bg', '');
         });

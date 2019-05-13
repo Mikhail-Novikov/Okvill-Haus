@@ -1085,7 +1085,7 @@ button.btn-floating {
   opacity: 1;
 }
 
-.slide .arrow {
+.arrow {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -1095,7 +1095,7 @@ button.btn-floating {
   transition: background .5s, opacity .5s;
 }
 
-.slide .arrow .arrow-left, .slide .arrow .arrow-right {
+.arrow .arrow-left, .arrow .arrow-right {
   position: absolute;
   top: 50%;
   margin-top: -1.5625rem;
@@ -1107,11 +1107,11 @@ button.btn-floating {
   transition: background .5s, opacity .5s;
 }
 
-.slide .arrow .arrow-left:hover, .slide .arrow .arrow-right:hover {
+.arrow .arrow-left:hover, .arrow .arrow-right:hover {
   opacity: 1;
 }
 
-.slide .arrow .arrow-left {
+.arrow .arrow-left {
   left: 0;
   background: url("../img/arrow-left.png") no-repeat center #fff;
   width: 3.125rem;
@@ -1119,14 +1119,14 @@ button.btn-floating {
   box-shadow: 0 0 2rem rgba(20, 26, 45, 0.09);
 }
 
-.slide .arrow .arrow-left.arrow--small {
+.arrow .arrow-left.arrow--small {
   background: url("../img/arrow-left-small.png") no-repeat center #fff;
   width: 1.875rem;
   height: 1.875rem;
   margin-top: -0.9375rem;
 }
 
-.slide .arrow .arrow-right {
+.arrow .arrow-right {
   right: 0;
   background: url("../img/arrow-right.png") no-repeat center #fff;
   width: 3.125rem;
@@ -1134,7 +1134,7 @@ button.btn-floating {
   box-shadow: 0 0 2rem rgba(20, 26, 45, 0.09);
 }
 
-.slide .arrow .arrow-right.arrow--small {
+.arrow .arrow-right.arrow--small {
   background: url("../img/arrow-right-small.png") no-repeat center #fff;
   width: 1.875rem;
   height: 1.875rem;
@@ -1465,6 +1465,100 @@ button.btn-floating {
 .service-desc__pic {
   margin: 0 1.875rem 0.9375rem 0;
   float: left;
+}
+
+.service-cart {
+  height: 30.625rem;
+}
+
+.service-cart .container {
+  background-color: #f8f7f9;
+  height: 100%;
+}
+
+.service-cart__wrap {
+  padding: 2.5rem 2.5rem 2.5rem 0;
+}
+
+.service-cart__wrap-pic {
+  width: 100%;
+  height: 20rem;
+  box-shadow: 0.6875rem 1.1875rem 3.875rem rgba(185, 185, 185, 0.27);
+  background-color: #ffffff;
+}
+
+.control__wrap {
+  padding-left: 1.875rem;
+}
+
+.control__inf-price, .control__buttons {
+  width: 13rem;
+  height: 7.0625rem;
+  margin: 0.9375rem;
+}
+
+.control__inf-price {
+  padding: 0.9375rem 0.5rem 0.9375rem 0.9375rem;
+  font-family: "Graphik-LC-Web";
+  color: #7a8c96;
+}
+
+.control__inf-price small {
+  font-size: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  display: inline-block;
+}
+
+.control__inf-price:first-child span {
+  font-size: 1.75rem;
+}
+
+.control__inf-price:nth-child(2) span {
+  font-size: 2.5rem;
+  color: #212121;
+}
+
+.control__inf-price {
+  border-color: #eaff00;
+  border-width: 0.5rem;
+  border-style: solid;
+}
+
+.control__buttons .btn, .control__buttons .btn-large, .control__buttons .btn-small {
+  width: 100%;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 1.125rem;
+}
+
+.control__buttons .btn:first-child, .control__buttons .btn-large:first-child, .control__buttons .btn-small:first-child {
+  margin-bottom: 0.625rem;
+  box-shadow: 0.375rem 0.4375rem 1.5rem rgba(112, 121, 133, 0.26);
+  background: #ffffff;
+  text-shadow: 0.1875rem 0.1875rem 0.75rem rgba(33, 33, 33, 0.24);
+  color: #9facbd;
+  text-transform: uppercase;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel .slick-slide div {
+  border: 0.0625rem solid #e4e3e5;
+  margin: 0 0.9375rem 0.9375rem;
+}
+
+.carousel--cart {
+  margin-left: 1.875rem;
+}
+
+.carousel .slick-arrow.arrow-left {
+  left: -1.875rem;
+}
+
+.carousel .slick-arrow.arrow-right {
+  right: -1.875rem;
 }
 
 /*# sourceMappingURL=app.css.map */

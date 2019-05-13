@@ -9,3 +9,18 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.text-fl {
+  display: inline-block;
+  padding-right: 3px;
+  letter-spacing: 1.05px;
+  font-family: 'HelveticaNeueCyr-Medium';
+  color: #000;
+  &:first-letter {
+    color: #f5003b;
+    font-size: 200%;
+    line-height: 1.1;
+    font-weight: bold;
+    font-family: "Georgia";
+  }
+}
