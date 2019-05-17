@@ -9,3 +9,17 @@
   }
 
 }
+
+
+.service-calc {
+  &__form {
+    label {
+      display: inline-block;
+      font-size: 12px;
+      color: #212121;
+      text-transform: uppercase;
+      width: 130px;
+    }  
+  }
+}
+  

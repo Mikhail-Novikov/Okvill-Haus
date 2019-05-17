@@ -1467,4 +1467,12 @@ button.btn-floating {
   float: left;
 }
 
+.service-calc__form label {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #212121;
+  text-transform: uppercase;
+  width: 8.125rem;
+}
+
 /*# sourceMappingURL=app.css.map */

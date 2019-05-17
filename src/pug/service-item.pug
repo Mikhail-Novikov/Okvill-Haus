@@ -36,3 +36,47 @@ include blocks/info
         |как «Бренд года/EFFIE» и «Народная марка».
 
 
+  +b.service-calc.mt-60
+    .container
+      +h2('Расчёт стоимости сайдинга')
+
+      .row
+        .col-sm-8
+          +e.form.contacts
+            form.contact-form.text-center
+              .forms-item.mb-25
+                input.form-control(type='text' name="")            
+              .forms-item.row.mb-25
+                .col-sm-8
+                  label.mb-5 ПЛОЩАДЬ СТЕН, М
+                    sup 2
+                  input#nic.form-control(type='text' name="nic")
+                .col-sm-8.offset-2
+                  label.mb-5 Периметр дома, м 
+                  input#nic.form-control(type='text' name="nic")
+              .forms-item.row.mb-25
+                .col-sm-8
+                  label.mb-5 Периметр окон и дверей, М
+                  input#nic.form-control(type='text' name="nic")
+                .col-sm-8.offset-2
+                  label.mb-5 Длина внешних углов, М
+                  input#nic.form-control(type='text' name="nic")              
+              .forms-item.row.mb-25
+                .col-sm-8
+                  label.mb-5 Длина внутренних углов, М
+                  input#nic.form-control(type='text' name="nic")
+                .col-sm-8.offset-2
+                  label.mb-5 Периметр подшива, М 
+                  input#nic.form-control(type='text' name="nic")
+              .forms-item.mb-25
+                input.form-control(type='text' name="")
+
+              .text-center
+                a(href="#").btn Отправить
+                  img(src="img/arrow_little.png", alt="отправить")
+
+        .col-sm-10
+
+
+          
+
