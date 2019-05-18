@@ -17,7 +17,11 @@
     height: 100%;
   }
   &__wrap {
-    padding: 40px 40px 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include media-breakpoint-up(sm) {
+      padding: 40px 40px 40px 0;
+    }  
   }
   &__wrap-pic {
     width: 100%;
@@ -30,12 +34,25 @@
 .control {
 
   &__wrap {
-    padding-left: 30px;
+    @include media-breakpoint-up(sm) {
+      padding-left: 30px;
+    }       
   }
   &__inf-price, &__buttons {
-    width: 208px;
+    width: 30%;
     height: 113px;
     margin: 15px;
+    @include media-breakpoint-down(md) {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      width: 44%;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    } 
   }
 
   &__inf-price {

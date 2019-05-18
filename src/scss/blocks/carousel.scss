@@ -2,11 +2,17 @@
   position: relative;
   .slick-slide div {
     border: 1px solid #e4e3e5;
-    margin: 0 15px 15px;
+      margin: 0 15px 15px;    
+    @include media-breakpoint-down(xs) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &--cart {
-    margin-left: 30px;
+    @include media-breakpoint-up(sm) {
+      margin-left: 30px;
+    }  
   }
 
   .slick-arrow.arrow-left {
@@ -14,5 +20,39 @@
   }
   .slick-arrow.arrow-right {
     right: -30px;
+  }
+
+  .slick-dots {
+
+    width: 100%;
+    position: absolute;
+    bottom: -14px;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 6px;
+      button {
+        background-color: transparent;
+        border: 2px solid #83797b;
+        border-radius: 20px;
+        height: 13px;
+        width: 13px;
+        font-size: 0;
+        outline: none;
+        position: relative;
+      }
+      &.slick-active button:after {
+        content: '';
+        background-color: #83797b;
+        border-radius: 10px;
+        display: block;
+        height: 5px;
+        width: 5px;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+
+      }
+    }
   }
 }

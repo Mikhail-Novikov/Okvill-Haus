@@ -811,6 +811,7 @@ exports.default = carousel;
 
 
 carousel.slickOptions = {
+  dots: true,
   infinite: false,
   prevArrow: '<a href="#" type="button" class="arrow-left arrow--small"></a>',
   nextArrow: '<a href="#" type="button" class="arrow-right arrow--small"></a>'

@@ -1477,7 +1477,14 @@ button.btn-floating {
 }
 
 .service-cart__wrap {
-  padding: 2.5rem 2.5rem 2.5rem 0;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 37.5rem) {
+  .service-cart__wrap {
+    padding: 2.5rem 2.5rem 2.5rem 0;
+  }
 }
 
 .service-cart__wrap-pic {
@@ -1487,14 +1494,33 @@ button.btn-floating {
   background-color: #ffffff;
 }
 
-.control__wrap {
-  padding-left: 1.875rem;
+@media (min-width: 37.5rem) {
+  .control__wrap {
+    padding-left: 1.875rem;
+  }
 }
 
 .control__inf-price, .control__buttons {
-  width: 13rem;
+  width: 30%;
   height: 7.0625rem;
   margin: 0.9375rem;
+}
+
+@media (max-width: 74.99875rem) {
+  .control__inf-price, .control__buttons {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 44%;
+  }
+}
+
+@media (max-width: 37.49875rem) {
+  .control__inf-price, .control__buttons {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .control__inf-price {
@@ -1549,8 +1575,17 @@ button.btn-floating {
   margin: 0 0.9375rem 0.9375rem;
 }
 
-.carousel--cart {
-  margin-left: 1.875rem;
+@media (max-width: 37.49875rem) {
+  .carousel .slick-slide div {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .carousel--cart {
+    margin-left: 1.875rem;
+  }
 }
 
 .carousel .slick-arrow.arrow-left {
@@ -1559,6 +1594,41 @@ button.btn-floating {
 
 .carousel .slick-arrow.arrow-right {
   right: -1.875rem;
+}
+
+.carousel .slick-dots {
+  width: 100%;
+  position: absolute;
+  bottom: -0.875rem;
+  text-align: center;
+}
+
+.carousel .slick-dots li {
+  display: inline-block;
+  padding: 0.375rem;
+}
+
+.carousel .slick-dots li button {
+  background-color: transparent;
+  border: 0.125rem solid #83797b;
+  border-radius: 1.25rem;
+  height: 0.8125rem;
+  width: 0.8125rem;
+  font-size: 0;
+  outline: none;
+  position: relative;
+}
+
+.carousel .slick-dots li.slick-active button:after {
+  content: '';
+  background-color: #83797b;
+  border-radius: 0.625rem;
+  display: block;
+  height: 0.3125rem;
+  width: 0.3125rem;
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -42,12 +42,12 @@ include blocks/info
       +e.wrap
         +h3('Сайдинг Docke ёлочка')
         .row.mt-45
-          .col-sm-6
+          .col-sm-6.d-none.d-lg-block
             +e.wrap-pic.d-table
               .d-table-row
                 .d-table-cell
                   img(src="img/services/cart1.png", alt="")
-          .col-sm-12
+          .col-lg-12.col-xs-18
             +b.carousel--cart
               +e.__inner
                 img(src="img/services/cart2.png", alt="")
@@ -56,10 +56,10 @@ include blocks/info
                 img(src="img/services/cart2.png", alt="")
                 img(src="img/services/cart2.png", alt="")
                 img(src="img/services/cart2.png", alt="")
-              +e.__arrows.arrow
+              +e.__arrows.arrow.d-none.d-sm-block
 
             +b.control--cart
-              +e.wrap.d-flex
+              +e.wrap.d-md-flex
                 +e.inf-price 
                   small Розничная цена:
                   .d-block
