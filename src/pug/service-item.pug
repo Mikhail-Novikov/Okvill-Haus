@@ -36,7 +36,7 @@ include blocks/info
         |Именно эта серия в свое время была заслуженно награждена такими высокими наградами
         |как «Бренд года/EFFIE» и «Народная марка».
 
-  
+
   +b.service-cart
     .container
       +e.wrap
@@ -60,25 +60,68 @@ include blocks/info
 
             +b.control--cart
               +e.wrap.d-md-flex
-                +e.inf-price 
+                +e.inf-price
                   small Розничная цена:
                   .d-block
-                    small от 
-                    span 257 
+                    small от
+                    span 257
                     small руб/шт
-                +e.inf-price 
+                +e.inf-price
                   small При заказе монтажа:
                   .d-block
-                    small От 
-                    span 190 
+                    small От
+                    span 190
                     small руб/шт.
+  +b.service-calc.mt-60
+    .container
+      +h2('Расчёт стоимости сайдинга')
+
+      .row
+        .col-sm-8
+          +e.form.contacts
+            form.contact-form.text-center
+              .forms-item.mb-25
+                input.form-control(type='text' name="")
+              .forms-item.row.mb-25
+                .col-sm-8
+                  label.mb-5 ПЛОЩАДЬ СТЕН, М
+                    sup 2
+                  input#nic.form-control(type='text' name="nic")
+                .col-sm-8.offset-2
+                  label.mb-5 Периметр дома, м
+                  input#nic.form-control(type='text' name="nic")
+              .forms-item.row.mb-25
+                .col-sm-8
+                  label.mb-5 Периметр окон и дверей, М
+                  input#nic.form-control(type='text' name="nic")
+                .col-sm-8.offset-2
+                  label.mb-5 Длина внешних углов, М
+                  input#nic.form-control(type='text' name="nic")
+              .forms-item.row.mb-25
+                .col-sm-8
+                  label.mb-5 Длина внутренних углов, М
+                  input#nic.form-control(type='text' name="nic")
+                .col-sm-8.offset-2
+                  label.mb-5 Периметр подшива, М
+                  input#nic.form-control(type='text' name="nic")
+              .forms-item.mb-25
+                input.form-control(type='text' name="")
+
+              .text-center
+                a(href="#").btn Отправить
+                  img(src="img/arrow_little.png", alt="отправить")
+
+        .col-sm-10
+
+
+
+
 
                 +e.buttons
-                  a.btn 
+                  a.btn
                     span Скачать прайс
                     img(src="img/services/xls.png", alt="")
-                  a.btn 
+                  a.btn
                     span заказать
                     img(src="img/services/rupor.png", alt="")
 
-                  

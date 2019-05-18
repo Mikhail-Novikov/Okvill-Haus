@@ -21,7 +21,7 @@
     padding-bottom: 40px;
     @include media-breakpoint-up(sm) {
       padding: 40px 40px 40px 0;
-    }  
+    }
   }
   &__wrap-pic {
     width: 100%;
@@ -36,7 +36,7 @@
   &__wrap {
     @include media-breakpoint-up(sm) {
       padding-left: 30px;
-    }       
+    }
   }
   &__inf-price, &__buttons {
     width: 30%;
@@ -52,7 +52,7 @@
       width: 100%;
       margin-left: 0;
       margin-right: 0;
-    } 
+    }
   }
 
   &__inf-price {
@@ -71,7 +71,7 @@
     &:nth-child(2) span {
       font-size: 40px;
       color: #212121;
-    }    
+    }
   }
 
   &__inf-price {
@@ -96,6 +96,20 @@
         text-transform: uppercase;
       }
     }
-  }  
+  }
 
+}
+
+
+
+.service-calc {
+  &__form {
+    label {
+      display: inline-block;
+      font-size: 12px;
+      color: #212121;
+      text-transform: uppercase;
+      width: 130px;
+    }
+  }
 }
