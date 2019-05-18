@@ -8,6 +8,7 @@ include blocks/works-home
 include blocks/banner-home
 include blocks/footer
 include blocks/h2
+include blocks/h3
 include blocks/breadcrumbs
 include blocks/info
 
@@ -24,11 +25,11 @@ include blocks/info
   +worksHome
 
   .container
-    +b.service-desc.d-block.d-md-flex
+    +b.service-desc.d-block.d-md-flex.mb-70
       +e.pic
         img(src="img/services/docke_logo.png", alt="сайдинга «Оквилл Хаус»")
 
-      +e.P.item.text Высококачественная серия винилового сайдинга «Оквилл Хаус»,
+      +e.P.item.text.js-text-fl Высококачественная серия винилового сайдинга «Оквилл Хаус»,
         |ставшая своеобразным эталоном рынка, которую постоянно,
         |но безуспешно пытаются копировать некоторые конкуренты.
         |Безуспешно, потому что главный секрет сайдинга «Оквилл Хаус» — его качество и репутация.
@@ -36,6 +37,41 @@ include blocks/info
         |как «Бренд года/EFFIE» и «Народная марка».
 
 
+  +b.service-cart
+    .container
+      +e.wrap
+        +h3('Сайдинг Docke ёлочка')
+        .row.mt-45
+          .col-sm-6.d-none.d-lg-block
+            +e.wrap-pic.d-table
+              .d-table-row
+                .d-table-cell
+                  img(src="img/services/cart1.png", alt="")
+          .col-lg-12.col-xs-18
+            +b.carousel--cart
+              +e.__inner
+                img(src="img/services/cart2.png", alt="")
+                img(src="img/services/cart2.png", alt="")
+                img(src="img/services/cart2.png", alt="")
+                img(src="img/services/cart2.png", alt="")
+                img(src="img/services/cart2.png", alt="")
+                img(src="img/services/cart2.png", alt="")
+              +e.__arrows.arrow.d-none.d-sm-block
+
+            +b.control--cart
+              +e.wrap.d-md-flex
+                +e.inf-price
+                  small Розничная цена:
+                  .d-block
+                    small от
+                    span 257
+                    small руб/шт
+                +e.inf-price
+                  small При заказе монтажа:
+                  .d-block
+                    small От
+                    span 190
+                    small руб/шт.
   +b.service-calc.mt-60
     .container
       +h2('Расчёт стоимости сайдинга')
@@ -45,14 +81,14 @@ include blocks/info
           +e.form.contacts
             form.contact-form.text-center
               .forms-item.mb-25
-                input.form-control(type='text' name="")            
+                input.form-control(type='text' name="")
               .forms-item.row.mb-25
                 .col-sm-8
                   label.mb-5 ПЛОЩАДЬ СТЕН, М
                     sup 2
                   input#nic.form-control(type='text' name="nic")
                 .col-sm-8.offset-2
-                  label.mb-5 Периметр дома, м 
+                  label.mb-5 Периметр дома, м
                   input#nic.form-control(type='text' name="nic")
               .forms-item.row.mb-25
                 .col-sm-8
@@ -60,13 +96,13 @@ include blocks/info
                   input#nic.form-control(type='text' name="nic")
                 .col-sm-8.offset-2
                   label.mb-5 Длина внешних углов, М
-                  input#nic.form-control(type='text' name="nic")              
+                  input#nic.form-control(type='text' name="nic")
               .forms-item.row.mb-25
                 .col-sm-8
                   label.mb-5 Длина внутренних углов, М
                   input#nic.form-control(type='text' name="nic")
                 .col-sm-8.offset-2
-                  label.mb-5 Периметр подшива, М 
+                  label.mb-5 Периметр подшива, М
                   input#nic.form-control(type='text' name="nic")
               .forms-item.mb-25
                 input.form-control(type='text' name="")
@@ -78,5 +114,14 @@ include blocks/info
         .col-sm-10
 
 
-          
+
+
+
+                +e.buttons
+                  a.btn
+                    span Скачать прайс
+                    img(src="img/services/xls.png", alt="")
+                  a.btn
+                    span заказать
+                    img(src="img/services/rupor.png", alt="")
 
