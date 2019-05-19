@@ -3,4 +3,10 @@ mixin breadcrumbs(b1, b2)
     ol.breadcrumb
       li.breadcrumb-item
         a(href="#") Главная
-      li.breadcrumb-item.active #{b1}
+
+      if b2
+        li.breadcrumb-item.active 
+          a(href="#") #{b1}
+        li.breadcrumb-item.active #{b2}
+      else
+        li.breadcrumb-item.active #{b1}

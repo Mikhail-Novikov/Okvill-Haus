@@ -1,0 +1,57 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/h3
+include blocks/breadcrumbs
+include blocks/info
+include blocks/pagination
+
+
+
++page(pagesList.newsItem.title)
+  +header
+  .container
+    +breadcrumbs('Новости','Сайдинг CanadaRidge')
+    .row.align-items-end.mb-30
+      .col-sm-6
+        +h2('Новости')
+      .col-sm-12
+        +infoBtn
+
+    +b.news.content.mt-sm-60
+      .row.pb-35
+        .col-xs-18.col-md-4.text-center.text-md-left
+          +e.IMG.wrap(src="img/no-fhoto.png", alt="")
+
+        .col-xs-18.col-md-13.offset-md-1
+          +e.DIV.item-desc-title
+            +h3('Сайдинг CanadaRidge')
+          +e.P.item-desc-text.text.js-text-fl Цокольный сайдинг Canada Ridge - разные цвета. Актуальные цены на фасадные панели Канада Ридж, полная...
+
+          p.text Это надежный и элегантный материал выпускается на современном российском заводе. В качестве основы используется 
+            strong полипропилен со специальными добавками, 
+            |которые помогают сохранить цвет изделия долгое время и не реагировать на воздействия природы (снег, дождь, град).
+
+          .text-center.d-sm-flex.justify-content-center
+            +e.btn.m-15.d-inline-block
+              
+                span.arrow-news.arrow--prev
+                  span
+                |Предыдущая новость
+
+            +e.btn.m-15.d-inline-block
+              
+                |Все новости
+                span.arrow-news.arrow--next
+                  span
+
+
+
++footer.__footer

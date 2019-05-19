@@ -1,0 +1,154 @@
+%arrow {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    top: -2px;
+    right: -2px;
+    background-color: #db2527;
+    transform: rotate(45deg);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    top: 2px;
+    right: -2px;
+    background-color: #db2527;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-45deg);
+  }
+}
+
+.news {
+  &__item {
+    margin-bottom: 55px;  
+    &:nth-child(odd) {
+      border-right: 1px solid $collection-border-color;
+      padding-right: 30px;
+    }
+    @include media-breakpoint-up(md) {
+      margin-bottom: 85px;  
+      &:nth-child(even) {
+        padding-left: 40px;
+      }
+    }
+  }
+  &__wrap {
+    max-width: 100%;
+  }
+
+  &__item-desc {
+    position: relative;
+    &:hover {
+      .arrow-news span {
+        width: 50px;
+      }
+    }
+  }
+
+  &__btn {
+    width: 222px;
+    height: 36px;
+    padding: 8px;
+    border: 2px solid #db2527;
+    color: #db2527;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    &:hover {
+      .arrow-news span {
+        width: 30px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &__item-desc {
+      margin-left: 15px;
+    }
+  }
+
+
+
+  &__item-desc-title {
+    margin-bottom: 30px;
+
+    .title-line {
+      min-width: 20px;
+      width: auto;
+    }
+  }
+
+  &__item-wrap-pic img {
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-down(xs) {
+    &__item-desc-text {
+      text-align: center;
+    }
+  }
+}
+
+.arrow-news {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+  width: 25px;
+  height: 10px;
+  &:before {
+    content: 'Далее';
+    position: absolute;
+    left: -45px;
+    top: -10px;
+    color: #db2527;
+  }
+  span {
+    position: relative;
+    top: 0;
+    width: 25px;
+    height: 1px;
+    background-color: #db2527;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    left: 0px;
+    display: block;
+    transition: width 0.3s;
+    @extend %arrow
+  }
+  &:hover span {
+    width: 40px;
+  }
+
+  &.arrow--prev {
+    bottom: 14px;
+    right: auto;
+    left: 10px;
+    transform: rotate(-180deg);
+    &:before {
+      display: none;
+      
+    }
+  }
+
+  &.arrow--next {
+    bottom: 6px;
+    right: 25px !important;
+    left: auto !important;
+    &:before {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    bottom: -25px;
+  }
+  @include media-breakpoint-down(sm) {
+    right: auto;
+    left: 50px;
+  }  
+}

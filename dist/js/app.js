@@ -149,7 +149,6 @@ $(function () {
 
   $.fn.paintFirstWord = function (e) {
     var str = this.text();
-    console.log(e);
     var splited = str.split(' ');
     var replaced = str.split(splited[0]).join('<span class = "' + e + '">' + splited[0] + '</span>');
     this.html(replaced);

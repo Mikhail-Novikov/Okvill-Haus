@@ -1,0 +1,43 @@
+.pagination {
+  display: inline-flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 12px;
+
+
+  .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -0.0625rem;
+    line-height: 1.25;
+    color: #7a8c96;
+    background-color: #fff;
+    border: 0.0625rem solid #dee2e6;
+    transition: 0.3s;
+  }
+
+  .page-item.active .page-link, .page-item:hover .page-link {
+    background-color: #db2527;
+    color: #fff;
+  }
+
+  .page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .page-item:last-child .page-link {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .icon-raquo:after {
+    content: '\00bb';
+  }
+  
+  .icon-laquo:after {
+    content: '\00ab';
+  }  
+}

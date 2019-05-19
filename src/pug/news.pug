@@ -1,0 +1,86 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/h3
+include blocks/breadcrumbs
+include blocks/info
+include blocks/pagination
+
+
+
++page(pagesList.news.title)
+  +header
+  .container
+    +breadcrumbs('Новости')
+    .row.align-items-end.mb-30
+      .col-sm-6
+        +h2('Новости')
+      .col-sm-12
+        +infoBtn
+
+
+    +b.news.mt-sm-60
+      .row
+        +e.item.col-md-9
+          .row
+            .col-sm-6
+              +e.item-wrap-pic.text-center.text-sm-left
+                img(src="img/news/pic1.png", alt="")
+            .col-sm-12
+              +e.A(href="#").item-desc.d-block
+                +e.DIV.item-desc-title
+                  +h3('Сайдинг CanadaRidge')
+                
+                +e.item-desc-text.text.js-text-fl Цокольный сайдинг Canada Ridge - разные цвета. Актуальные цены на фасадные панели Канада Ридж, полная...
+                span.arrow-news 
+                  span
+        +e.item.col-md-9
+          .row
+            .col-sm-6
+              +e.item-wrap-pic.text-center.text-sm-left
+                img(src="img/news/pic2.png", alt="")
+            .col-sm-12
+              +e.A(href="#").item-desc.d-block
+                +e.DIV.item-desc-title
+                  +h3('Террадек')
+                +e.item-desc-text.text.js-text-fl Компания Террадек предлагает несколько профилей террасной доски из ДПК. Односторонний и... 
+                span.arrow-news 
+                  span
+                
+        +e.item.col-md-9
+          .row
+            .col-sm-6
+              +e.item-wrap-pic.text-center.text-sm-left
+                img(src="img/news/pic3.png", alt="")
+            .col-sm-12
+              +e.A(href="#").item-desc.d-block
+                +e.DIV.item-desc-title
+                  +h3('Тимберблок')
+                +e.item-desc-text.text.js-text-fl Цвета серии Тимберблок имитируют натуральное дерево. Структура панели включает в себя... 
+                span.arrow-news 
+                  span
+
+        +e.item.col-md-9
+          .row
+            .col-sm-6
+              +e.item-wrap-pic.text-center.text-sm-left
+                img(src="img/news/pic4.png", alt="")
+            .col-sm-12
+              +e.A(href="#").item-desc.d-block
+                +e.DIV.item-desc-title
+                  +h3('Террадек')
+                +e.item-desc-text.text.js-text-fl Компания Террадек предлагает несколько профилей террасной доски из ДПК. Односторонний и... 
+                span.arrow-news 
+                  span
+
+      .text-center.mb-30
+        +pagination
+
++footer.__footer

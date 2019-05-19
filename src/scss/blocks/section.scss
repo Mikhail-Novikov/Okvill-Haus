@@ -28,6 +28,7 @@
 h2 {
   font-size: 32px;
   font-family: "Graphik-LC-Web";
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -50,6 +51,14 @@ h3 {
     color: #7a8c96;
     text-align: justify;
     padding-bottom: 25px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  strong, b {
+    color: #121212;
+    font-family: 'HelveticaNeueCyr-Medium';
+    font-weight: normal;
   }
   ul {
     padding-bottom: 25px;
