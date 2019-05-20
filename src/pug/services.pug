@@ -1,0 +1,88 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/h3
+include blocks/breadcrumbs
+include blocks/info
+
++page(pagesList.services.title)
+  +header
+  .container.mb-30
+    +breadcrumbs('Услуги')
+    .row.align-items-end
+      .col-sm-6
+        +h2('Услуги')
+      .col-sm-12
+        +infoBtn
+        
+    +b.service.pt-50
+      .row
+        .col-sm-6.pb-30
+          +e.A(href="#").pic
+            img.d-block(src="img/services/services1.png", alt="")
+            +e.link.text-center
+              +e.link-wrap
+                img(src="img/works-home/siding.png", alt="")
+                p Сайдинг
+            .overlow 
+
+
+        .col-sm-6.pb-30
+          +e.A(href="#").pic
+            img.d-block(src="img/services/services2.png", alt="")
+            +e.link.text-center
+              +e.link-wrap
+                img(src="img/works-home/fasad.png", alt="")
+                p Фасадные панели
+            .overlow 
+
+
+        .col-sm-6.pb-30
+          +e.A(href="#").pic
+            img.d-block(src="img/services/services3.png", alt="")
+            +e.link.text-center  
+              +e.link-wrap
+                img(src="img/works-home/vodostok.png", alt="")
+                p Водосточные системы
+            .overlow 
+
+
+        .col-sm-6.pb-30
+          +e.A(href="#").pic
+            img.d-block(src="img/services/services4.png", alt="")
+            +e.link.text-center  
+              +e.link-wrap
+                img(src="img/works-home/Drainage.png", alt="")
+                p Дренажные системы
+            .overlow 
+
+
+        .col-sm-6.pb-30
+          +e.A(href="#").pic
+            img.d-block(src="img/services/services5.png", alt="")
+            +e.link.text-center  
+              +e.link-wrap
+                img(src="img/works-home/gazon_копия.png", alt="")
+                p Газонная решётка
+            .overlow 
+
+
+        .col-sm-6.pb-30
+          +e.A(href="#").pic
+            img.d-block(src="img/services/services6.png", alt="")
+            +e.link.text-center  
+              +e.link-wrap
+                img(src="img/works-home/sale.png", alt="")
+                p Акции на монтаж
+
+            .overlow                 
+
+
++footer.__footer

@@ -1487,6 +1487,69 @@ button.btn-floating {
   text-align: left;
 }
 
+.service__pic {
+  position: relative;
+  display: block;
+}
+
+.service__pic img {
+  max-width: 100%;
+}
+
+.service__pic .overlow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.56);
+  opacity: 0;
+  transition: 0.2s;
+  z-index: 0;
+}
+
+.service__pic:hover .service__link-wrap {
+  background-color: #fff;
+}
+
+.service__pic:hover .overlow {
+  opacity: 1;
+}
+
+.service__link {
+  position: absolute;
+  top: 50%;
+  margin-top: -5rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.service__link-wrap {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  background-color: rgba(254, 254, 254, 0.88);
+  transition: all 0.3s;
+}
+
+.service__link-wrap p {
+  color: #868e93;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  width: 5.875rem;
+}
+
 .service-desc {
   margin-top: 3.125rem;
 }
