@@ -1,11 +1,58 @@
-.service {
+.works {
+  &__link-wrap {
+    opacity: 0;
+    div {
+      color: #ffffff;
+      font-weight: 500;
+      font-family: 'HelveticaNeueCyr-Bold';
+      padding: 30px;
+      max-width: 300px;
+      @include media-breakpoint-up(md) {
+        margin-left: 40px;
+      }
+      text-align: left;
+      p {
+        font-family: 'HelveticaNeueCyr-Light';
+        font-size: 13px;
+      }
+    }
+  }
+
+  .overlow-work {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: rgba(219, 37, 39, 0.66);
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 0;
+  }
+
+  &__pic {
+    &:hover {
+      .works {
+        &__link-wrap {
+          opacity: 1;
+        }
+      }
+      .overlow-work {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.service, .works {
   &__pic {
     position: relative;
     display: block;
     img {
-      max-width: 100%;
+      width: 100%;
     }
-    .overlow{
+    .overlow {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -14,20 +61,19 @@
       background-color: rgba(255, 255, 255, 0.56);
       opacity: 0;
       transition: 0.2s;
-      z-index: 0;
+      z-index: 1;
     }
     &:hover {
       .service {
         &__link-wrap {
           background-color: #fff;
+          opacity: 1;
         }
       }
       .overlow {
         opacity: 1;
       }
     }
-    
-
   }
   
 
@@ -39,7 +85,7 @@
     right: 0;
     z-index: 1;
   }
-  &__link-wrap {
+  &__link-wrap:not(.works__link-wrap) {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -66,10 +112,8 @@
     margin: 0 30px 15px 0;
     @include media-breakpoint-down(lg) {
       float: left;
-
     }
   }
-
 }
 
 .service-cart{
@@ -81,9 +125,7 @@
   &__wrap {
     padding-top: 40px;
     padding-bottom: 40px;
-    @include media-breakpoint-up(sm) {
-      padding: 40px 40px 40px 0;
-    }
+   
   }
   &__wrap-pic {
     width: 100%;
@@ -162,7 +204,18 @@
 
 }
 
-
+.watermark:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url('../img/watermark-logo.png') no-repeat;
+  background-size: contain;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.38);
+  width: 54px;
+  height: 60px;
+  z-index: 0;
+}
 
 .service-calc {
   &__form {

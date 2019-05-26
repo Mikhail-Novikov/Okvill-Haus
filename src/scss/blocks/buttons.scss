@@ -68,7 +68,7 @@ $button-floating-radius: 50% !default;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     height: $button-height;
   }
 }
@@ -88,7 +88,7 @@ $button-floating-radius: 50% !default;
     background: $button-info-color-gray;
     box-shadow: 6px 7px 24px rgba(107, 110, 111, 0.33);
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     height: 56px;
   }
 }

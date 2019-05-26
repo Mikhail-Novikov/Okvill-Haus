@@ -6,6 +6,8 @@ import bgSliderSmall from './blocks/bg-slider-small';
 import mapGoogle from './blocks/map';
 import firstWord from './blocks/paint-first-word';
 import carousel from './blocks/cart-carusel';
+import afterBefore from './blocks/after-before';
+
 
 $(() => {
 
@@ -17,6 +19,8 @@ $(() => {
   }
   firstWord();
   carousel();
+
+  afterBefore();
 
   $('.js-slide-big').slide({
     'slideSpeed': 6000000,

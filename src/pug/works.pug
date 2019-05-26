@@ -1,0 +1,90 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/h3
+include blocks/breadcrumbs
+include blocks/info
+
++page(pagesList.works.title)
+  +header
+  .container.mb-30
+    +breadcrumbs('Выполненные работы')
+    .row.align-items-end
+      .col-sm-8
+        +h2('Выполненные работы')
+      .col-sm-10
+        +infoBtn
+        
+    +b.works.pt-50
+      .row.justify-content-center.text-center
+        .col-xs-16.col-sm-9.col-md-6.pb-30
+          +e.A(href="#").pic.watermark
+            img.d-block.m-auto(src="img/services/services1.png", alt="")
+            +e.DIV.link.text-center  
+              +e.DIV.link-wrap
+                div Дом в Парголово.
+                  p.pt-5 Выполненные работы: виниловый сайдинг.
+            .overlow-work
+            
+
+
+        .col-sm-9.col-md-6.pb-30
+          +e.A(href="#").pic
+            img.d-block.m-auto(src="img/services/services2.png", alt="")
+            +e.DIV.link.text-center  
+              +e.DIV.link-wrap
+                div Дом в Парголово.
+                  p.pt-5 Выполненные работы: виниловый сайдинг.
+            .overlow-work 
+            .watermark
+
+        .col-sm-9.col-md-6.pb-30
+          +e.A(href="#").pic
+            img.d-block.m-auto(src="img/services/services3.png", alt="")
+            +e.DIV.link.text-center  
+              +e.DIV.link-wrap
+                div Дом в Парголово.
+                  p.pt-5 Выполненные работы: виниловый сайдинг.
+            .overlow-work 
+            .watermark
+
+        .col-sm-9.col-md-6.pb-30
+          +e.A(href="#").pic
+            img.d-block.m-auto(src="img/services/services4.png", alt="")
+            +e.DIV.link.text-center  
+              +e.DIV.link-wrap
+                div Дом в Парголово.
+                  p.pt-5 Выполненные работы: виниловый сайдинг.
+            .overlow-work 
+            .watermark
+
+        .col-sm-9.col-md-6.pb-30
+          +e.A(href="#").pic
+            img.d-block.m-auto(src="img/services/services5.png", alt="")
+            +e.DIV.link.text-center  
+              +e.DIV.link-wrap
+                div Дом в Парголово.
+                  p.pt-5 Выполненные работы: виниловый сайдинг.
+
+            .overlow-work 
+            .watermark
+
+        .col-sm-9.col-md-6.pb-30
+          +e.A(href="#").pic
+            img.d-block.m-auto(src="img/services/services6.png", alt="")
+            +e.DIV.link.text-center  
+              +e.DIV.link-wrap
+                div Дом в Парголово.
+                  p.pt-5 Выполненные работы: виниловый сайдинг.
+
+            .overlow-work
+            .watermark
+
++footer.__footer

@@ -1,0 +1,41 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
+include blocks/header
+include blocks/promo
+include blocks/works-home
+include blocks/banner-home
+include blocks/footer
+include blocks/h2
+include blocks/h3
+include blocks/breadcrumbs
+include blocks/info
+
++page(pagesList.worksItem.title)
+  +header
+  .container.mb-30
+    +breadcrumbs(pagesList.worksItem.title)
+    .row.align-items-center
+      .col-lg-10.col-sm-9
+        +h2('Выполненные работы (до и после*)')
+      .col-lg-8.col-sm-9
+        +infoBtn
+        
+    +b.works.pt-50
+
+      figure.cd-image-container
+        img(src='img/works-home/img-original.jpg', alt='Original Image')
+        | &#x9;&#x9;
+        span.cd-image-label(data-type='original') После
+        | &#x9;&#x9;
+        .cd-resize-img
+
+          img(src='img/works-home/img-modified.jpg', alt='Modified Image')
+          | &#x9;&#x9;&#x9;
+          span.cd-image-label(data-type='modified') До
+        | &#x9;&#x9;
+        span.cd-handle
+
+
++footer.__footer
