@@ -57,7 +57,7 @@
     "hoek": "^5.0.3",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.4.0",
-    "jquery-validation": "^1.17.0",
+    "jquery-validation": "^1.19.5",
     "masonry-layout": "^4.2.1",
     "nodelist-foreach-polyfill": "^1.2.0",
     "normalize.css": "^8.0.0",
