@@ -4,3 +4,5 @@ dist/
 app/css/
 /**/*.psd
 /**/Thumbs.db
+.idea
+.vscode
