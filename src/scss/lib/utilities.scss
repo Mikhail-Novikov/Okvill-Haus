@@ -16,11 +16,22 @@ main {
   letter-spacing: 1.05px;
   font-family: 'HelveticaNeueCyr-Medium';
   color: #000;
+
   &:first-letter {
     color: #f5003b;
     font-size: 200%;
     line-height: 1.1;
     font-weight: bold;
     font-family: "Georgia";
+  }
+}
+
+@for $i from 1 through 6 {
+  .margin-#{$i*4} {
+    margin: #{$i*4}px;
+  }
+
+  .margin-bottom-#{$i*4} {
+    margin-bottom: #{$i*4}px;
   }
 }
